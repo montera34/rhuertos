@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                 ext: '.css'
             }
         },
-
+	    
         // image sprites
         sprite: {
             all: {
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
                 },
                 options: {
                     proxy: "http://huertos.localhost",
-                    //watchTask: true,
+                    watchTask: true,
                     browser: "firefox"
                 }
             }
