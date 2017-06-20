@@ -5,6 +5,22 @@
  * @package _mbbasetheme
  */
 
+/**
+ * Set theme global vars
+ */
+function mb_theme_vars() {
+	if (!defined('MB_BLOGNAME'))
+	    define('MB_BLOGNAME', get_bloginfo('name'));
+
+	if (!defined('MB_BLOGDESC'))
+	    define('MB_BLOGDESC', get_bloginfo('description','display'));
+
+	if (!defined('MB_BLOGURL'))
+	    define('MB_BLOGURL', esc_url( home_url( '/' ) ));
+
+	if (!defined('MB_BLOGTHEME'))
+	    define('MB_BLOGTHEME', get_bloginfo('template_directory'));
+}
 
 /**
  * Register Widget Areas

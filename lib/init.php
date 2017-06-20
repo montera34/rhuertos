@@ -22,6 +22,9 @@ if ( ! function_exists( '_mbbasetheme_setup' ) ) :
  */
 function _mbbasetheme_setup() {
 
+	// Load some global vars
+	mb_theme_vars();
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.

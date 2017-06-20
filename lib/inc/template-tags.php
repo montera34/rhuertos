@@ -133,3 +133,37 @@ function _mbbasetheme_category_transient_flusher() {
 }
 add_action( 'edit_category', '_mbbasetheme_category_transient_flusher' );
 add_action( 'save_post',     '_mbbasetheme_category_transient_flusher' );
+
+if ( ! function_exists( '_mbbasetheme_get_searchform' ) ) :
+/**
+ * Outputs search form
+ *
+ * @param	string $post_type Optional. post type ID
+ * @param	string $form_classes Optional.
+ * @param	bool $submin_btn Optional.
+ * @param	string $search_label Optional. Submit button label
+ *
+ * @return	search form HTML code
+ */
+function _mbbasetheme_get_searchform($post_type,$form_classes,$submit_btn,$search_label) {
+	
+	$filters_out = ( $post_type != false ) ? '<input type="hidden" name="post_type" value="'.$post_type.'" />' : '';
+	$submit_out = ( $submit_btn != false ) ? '<input type="submit" id="searchsubmit" value="'.__('Search','_mbbasetheme').'" />' : '';
+
+	if ( is_search() ) {
+		$active_class = ' searched';
+		$search_label = __('Search results: ','_mbbasetheme').' '.get_search_query();
+	} else { $active_class = ''; }
+	$form_out = '
+	<form method="get" id="searchform" class="'.$form_classes.'" action="'.get_home_url().'/" role="search">
+	<div class="form-group">
+		'.$filters_out.'
+		<label class="sr-only" for="s">'.$search_label.'</label>
+		<input class="form-control input-sm'.$active_class.'" type="text" value="" name="s" id="s" placeholder="'.$search_label.'" />
+		'.$submit_out.'
+	</div>
+	</form>
+	';
+	echo $form_out; return;
+}
+endif;
