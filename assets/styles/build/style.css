@@ -19,6 +19,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 /* ==========================================================================
+   Mixins
+   ========================================================================== */
+/*
+ * Mixin for easy media queries
+ * @include bp(tablet) { SCSS here };
+*/
+/*
+ * Mixin for clearfix
+ * @include clearfix;
+*/
+/*
+ * Mixin for basic CSS triangles
+ * @include triangle(up, #000, 50px)
+*/
+/*
+ * @font-face mixin
+ * Bulletproof font-face via Font Squirrel
+ * @include fontface('family', 'assets/fonts/', 'myfontname');
+ */
+/* ==========================================================================
    Variables
    ========================================================================== */
 /* ==========================================================================
@@ -27,6 +47,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .barw {
   background-color: #fff;
   color: #2b3423;
+  font-size: 18px;
+  font-weight: 700;
 }
 .barw .row {
   padding: 20px 0;

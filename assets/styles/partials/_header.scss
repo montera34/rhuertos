@@ -2,12 +2,15 @@
    Header
    ========================================================================== */
 
+
 .barw {
 	.row {
 		padding: 20px 0;
 	}
 	background-color: $barw-bg;
 	color: $barw-fg;
+	font-size: 18px;
+	font-weight: 700;
 }
 
 .bargd {
