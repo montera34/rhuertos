@@ -3,4 +3,10 @@
    ========================================================================== */
 
 .site-footer {
+	background-color: $bargl-bg;
+	color: $bargl-fg;
+	.barw {
+		&-brand { padding: 15px 0; }
+		
+	}
 }

@@ -30,7 +30,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="pull-right"><img src="<?php echo MB_BLOGTHEME; ?>/assets/images/logo.madrid.png" alt="Ayuntamiento de Madrid" /></div>
-						<div><?php echo MB_BLOGDESC; ?></div>
+						<div class="barw-brand"><?php echo MB_BLOGDESC; ?></div>
 					</div>
 				</div>
 			</div>
@@ -49,28 +49,28 @@
 			</div>
 		</div>
 		<nav id="pre-menu" class="navbar navbar-default bargl" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pre-menu-collapse">
-					<span class="sr-only"><?php _e('Show/hide menu','_mbbasetheme') ?></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#pre-menu-collapse">
+						<span class="sr-only"><?php _e('Show/hide menu','_mbbasetheme') ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="pre-menu-collapse">
+					<?php $location = "header";
+					if ( has_nav_menu( $location ) ) {
+						$args = array(
+							'theme_location'  => $location,
+							'container' => false,
+							'menu_id' => 'navbar-header',
+							'menu_class' => 'nav navbar-nav navbar-left navbar-menu'
+						);
+						wp_nav_menu( $args );
+					} ?>
+				</div>
 			</div>
-			<div class="collapse navbar-collapse" id="pre-menu-collapse">
-				<?php $location = "primary";
-				if ( has_nav_menu( $location ) ) {
-					$args = array(
-						'theme_location'  => $location,
-						'container' => false,
-						'menu_id' => 'navbar-primary',
-						'menu_class' => 'nav navbar-nav navbar-left navbar-menu'
-					);
-					wp_nav_menu( $args );
-				} ?>
-			</div>
-		</div>
 		</nav>
 	</header><!-- #masthead -->
 

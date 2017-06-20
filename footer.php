@@ -10,11 +10,62 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<p class="copyright">&copy; <?php echo date( "Y" ); echo " "; bloginfo( 'name' ); ?></p>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id="epi" class="site-footer bargl" role="contentinfo">
+		<nav id="epi-menu" class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#epi-menu-collapse">
+						<span class="sr-only"><?php _e('Show/hide menu','_mbbasetheme') ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="epi-menu-collapse">
+					<?php $location = "footer";
+					if ( has_nav_menu( $location ) ) {
+						$args = array(
+							'theme_location'  => $location,
+							'container' => false,
+							'menu_id' => 'navbar-footer',
+							'menu_class' => 'nav navbar-nav navbar-left navbar-menu'
+						);
+						wp_nav_menu( $args );
+					} ?>
+				</div>
+			</div>
+		</nav>
+		<div id="credits" class="barw">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 barw-brand"><?php echo __('Madrid City Council') ." ". date( "Y" ); ?></div>
+					<div class="col-sm-9">
+						<nav id="credits-menu" class="navbar navbar-right navbar-inverse" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#credits-menu-collapse">
+								<span class="sr-only"><?php _e('Show/hide menu','_mbbasetheme') ?></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="credits-menu-collapse">
+							<?php $location = "credits";
+							if ( has_nav_menu( $location ) ) {
+								$args = array(
+									'theme_location'  => $location,
+									'container' => false,
+									'menu_id' => 'navbar-credits',
+									'menu_class' => 'nav navbar-nav navbar-right navbar-menu'
+								);
+								wp_nav_menu( $args );
+							} ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- #credits -->
+	</footer><!-- #epi -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
