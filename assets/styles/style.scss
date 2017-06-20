@@ -22,7 +22,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 //// Reset, Variables, Mixins, Etc
 //// DO NOT EDIT ORDER OF FILES
 //@import "partials/mixins";
-//@import "partials/variables";
+@import "partials/variables";
 //@import "partials/normalize";
 //
 //// Globals
@@ -33,7 +33,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 //
 //// Layout
 //@import "partials/layout";
-//@import "partials/header";
+@import "partials/header";
 //@import "partials/footer";
 //
 //// Menus, Page and Post styles

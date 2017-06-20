@@ -18,5 +18,30 @@ Use it to make something cool, have fun, and share what you've learned with othe
   _mbbasetheme is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
 */
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.barw {
+  background-color: #fff;
+  color: #2b3423;
+}
+.barw .row {
+  padding: 20px 0;
+}
+
+.bargd {
+  background-color: #2b3423;
+  color: #fff;
+}
+.bargd .row {
+  padding: 10px 0;
+}
+
+.bargl .navbar-collapse {
+  text-transform: uppercase;
+}
 
 /*# sourceMappingURL=style.css.map */

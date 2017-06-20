@@ -2,11 +2,23 @@
    Header
    ========================================================================== */
 
-.site-header {
+.barw {
+	.row {
+		padding: 20px 0;
+	}
+	background-color: $barw-bg;
+	color: $barw-fg;
 }
 
-.site-description {
+.bargd {
+	.row {
+		padding: 10px 0;
+	}
+	background-color: $bargd-bg;
+	color: $bargd-fg;
 }
-
-.site-title {
+.bargl {
+	.navbar-collapse {
+		text-transform: uppercase;
+	}
 }
