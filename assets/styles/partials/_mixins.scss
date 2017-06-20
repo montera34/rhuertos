@@ -75,12 +75,12 @@
  * @include fontface('family', 'assets/fonts/', 'myfontname');
  */
 
-@mixin fontface($font-family, $font-url, $font-name) {
+@mixin fontface($font-family, $font-url, $font-name,$font-style,$font-weight) {
 	@font-face {
 		font: {
 			family: $font-family;
-			style: normal;
-			weight: normal;
+			style: $font-style;
+			weight: $font-weight;
 		}
 		src: url($font-url + '/' + $font-name + '.eot');
 		src: url($font-url + '/' + $font-name + '.eot#iefix') format('embedded-opentype'),
