@@ -9,24 +9,31 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+<main id="main" class="site-main" role="main">
 
-				<?php get_template_part( 'content', 'page' ); ?>
+	<?php
+	// NEWS
+	////
+	$args = array(
+		'post_type' => ';post',
+		'posts_per_page' => '4'
+	);
+	$news = new WP_Query($args);
+	if ( $news->have_posts() ) :
+	?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+		<section id="news" class="container-fluid">
+			<header class="row"><h2 class="col-sm-12"><?php _e('Last news','_mbbasetheme') ?></h2></header>
+			<div class="row">
+				<?php while ( $news->have_posts() ) : $news->the_post();
+					get_template_part( 'content', 'post' );
+				endwhile; // end of the loop. ?>
+			</div>
+		</section><!-- #news -->
 
-			<?php endwhile; // end of the loop. ?>
+	<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+</main><!-- #main -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

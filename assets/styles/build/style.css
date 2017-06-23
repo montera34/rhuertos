@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: rHuertos
 Theme URI: http://huertos.madrid.es
@@ -188,6 +189,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 .site-footer .barw-brand {
   padding: 15px 0;
+}
+
+/* ==========================================================================
+   Home Page Template
+   ========================================================================== */
+body.home h2 {
+  font: 700 16px 'Museo', sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+body.home h2:before, body.home h2:after {
+  content: '·';
+}
+body.home h3 {
+  font: 900 17px/1.1em 'Lato', sans-serif;
+  margin: 10px 0 0 0;
+}
+body.home .new-date {
+  font: 400 16px 'Lato', sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
