@@ -16,8 +16,15 @@ get_header(); ?>
 	// NEWS
 	////
 	$args = array(
-		'post_type' => ';post',
-		'posts_per_page' => '4'
+		'post_type' => 'actividad',
+		'posts_per_page' => '4',
+		'meta_query' => array(
+			array(
+				'key'     => '_act_date_end',
+				'value'   => date( "Y-m-d" ),
+				'compare' => '>',
+			),
+		)
 	);
 	$news = new WP_Query($args);
 	if ( $news->have_posts() ) :
@@ -27,7 +34,7 @@ get_header(); ?>
 			<header class="row"><h2 class="col-sm-12"><?php _e('Last news','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<?php while ( $news->have_posts() ) : $news->the_post();
-					get_template_part( 'content', 'post' );
+					get_template_part( 'content', 'actividad' );
 				endwhile; // end of the loop. ?>
 			</div>
 		</section><!-- #news -->

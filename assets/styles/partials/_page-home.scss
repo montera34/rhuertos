@@ -9,12 +9,19 @@ body.home {
 		text-decoration: underline;
 		&:before, &:after { content: '·'; }
 	}
-	h3 {
-		font: 900 17px/1.1em 'Lato', sans-serif;
-		margin: 10px 0 0 0;
-	}
-	.new-date {
-		font: 400 16px 'Lato', sans-serif;
+	.actividad {
+		h3 {
+			font: 900 19px/1.1em 'Lato', sans-serif;
+			margin: 10px 0 0 0;
+		}
+		&-date {
+			font: 400 14px 'Lato', sans-serif;
+		}
+		&-org {
+			text-align: center;
+			margin: 20px 0 0 0;
+		
+		}
 	}
 
 }
