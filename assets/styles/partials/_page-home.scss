@@ -9,6 +9,9 @@ body.home {
 		text-decoration: underline;
 		&:before, &:after { content: '·'; }
 	}
+	.home-block {
+		margin-bottom: 50px;
+	}
 	.actividad {
 		h3 {
 			font: 900 19px/1.1em 'Lato', sans-serif;
@@ -18,6 +21,24 @@ body.home {
 			font: 400 14px 'Lato', sans-serif;
 		}
 		&-org {
+			text-align: center;
+			margin: 20px 0 0 0;
+		
+		}
+	}
+	.garden {
+		h3 {
+			font: 900 19px/1.1em 'Lato', sans-serif;
+			margin: 10px 0 0 0;
+			text-transform: uppercase;
+		}
+		&-address {
+			font: 400 14px 'Lato', sans-serif;
+		}
+		&-district {
+			font: 700 14px 'Lato', sans-serif;
+		}
+		&-icon {
 			text-align: center;
 			margin: 20px 0 0 0;
 		

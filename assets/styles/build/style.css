@@ -202,6 +202,9 @@ body.home h2 {
 body.home h2:before, body.home h2:after {
   content: '·';
 }
+body.home .home-block {
+  margin-bottom: 50px;
+}
 body.home .actividad h3 {
   font: 900 19px/1.1em 'Lato', sans-serif;
   margin: 10px 0 0 0;
@@ -210,6 +213,21 @@ body.home .actividad-date {
   font: 400 14px 'Lato', sans-serif;
 }
 body.home .actividad-org {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+body.home .garden h3 {
+  font: 900 19px/1.1em 'Lato', sans-serif;
+  margin: 10px 0 0 0;
+  text-transform: uppercase;
+}
+body.home .garden-address {
+  font: 400 14px 'Lato', sans-serif;
+}
+body.home .garden-district {
+  font: 700 14px 'Lato', sans-serif;
+}
+body.home .garden-icon {
   text-align: center;
   margin: 20px 0 0 0;
 }

@@ -16,7 +16,7 @@ get_header(); ?>
 	// SLIDESHOW
 	////
 	?>
-		<section id="featured" class="container-fluid">
+		<section id="featured" class="home-block container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 					<?php _mbbasetheme_get_carousel($post->ID); ?>
@@ -42,7 +42,7 @@ get_header(); ?>
 	if ( $news->have_posts() ) :
 	?>
 
-		<section id="news" class="container-fluid">
+		<section id="news" class="home-block container-fluid">
 			<header class="row"><h2 class="col-sm-12"><?php _e('Last news','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<?php while ( $news->have_posts() ) : $news->the_post();
@@ -51,7 +51,28 @@ get_header(); ?>
 			</div>
 		</section><!-- #news -->
 
-	<?php endif; ?>
+	<?php endif;
+
+	// GARDENS
+	////
+	$args = array(
+		'post_type' => 'garden',
+		'posts_per_page' => '4',
+	);
+	$gardens = new WP_Query($args);
+	if ( $gardens->have_posts() ) :
+	?>
+
+		<section id="gardens" class="home-block container-fluid">
+			<header class="row"><h2 class="col-sm-12"><?php _e('Last published gardens','_mbbasetheme') ?></h2></header>
+			<div class="row">
+				<?php while ( $gardens->have_posts() ) : $gardens->the_post();
+					get_template_part( 'content', 'garden' );
+				endwhile; // end of the loop. ?>
+			</div>
+		</section><!-- #gardens -->
+
+	<?php endif;?>
 
 </main><!-- #main -->
 
