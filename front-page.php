@@ -13,6 +13,18 @@ get_header(); ?>
 <main id="main" class="site-main" role="main">
 
 	<?php
+	// SLIDESHOW
+	////
+	?>
+		<section id="featured" class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<?php _mbbasetheme_get_carousel($post->ID); ?>
+				</div>
+			</div>
+		</section>
+
+	<?php
 	// NEWS
 	////
 	$args = array(

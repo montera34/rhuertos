@@ -167,3 +167,69 @@ function _mbbasetheme_get_searchform($post_type,$form_classes,$submit_btn,$searc
 	echo $form_out; return;
 }
 endif;
+
+if ( ! function_exists( '_mbbasetheme_get_carousel' ) ) :
+/**
+ * Outputs a carousel of slides
+ *
+ * @param	string $post_id Required. post ID
+ *
+ * @return	A carousel HTML code
+ */
+function _mbbasetheme_get_carousel($post_id) {
+	$carousel = get_post_meta($post_id,'_carousel',true);
+	if ( $carousel == '' )
+		return;
+
+	// carousel vars
+	$carousel_h = get_post_meta( $carousel['ID'],'_carousel_height',true);
+	$slide_style = ( $carousel_h != '' ) ? ' style="max-height: '.$carousel_h.'px;"' : '';
+	// indicators and controls
+	$indicators = get_post_meta($carousel['ID'],'_carousel_indicators',true);
+	$controls = get_post_meta($carousel['ID'],'_carousel_controls',true);
+	$indicators_out = ( $indicators == 1 ) ? '<!-- Indicators --><ol class="carousel-indicators">' : '';
+	if ( $controls == 1 ) {
+		$controls_out = '
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-'.$carousel['post_slug'].'" role="button" data-slide="prev">
+				<span class="icon-prev" aria-hidden="true"></span>
+				<span class="sr-only">'._('Previous','_mbbasetheme').'</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-'.$carousel['post_slug'].'" role="button" data-slide="next">
+				<span class="icon-next" aria-hidden="true"></span>
+				<span class="sr-only">'.__('Next','_mbbasetheme').'</span>
+			</a>
+		';
+	} else { $controls_out = ''; }
+	// slides
+	$slides = get_post_meta( $carousel['ID'],'_carousel_diapos',false);
+	$slides_out = '<div class="carousel-inner" role="listbox">';
+	$count = 0;
+	foreach ( $slides as $s ) {
+		$active_class = ( $count == 0 ) ? ' active' : '';
+		$slide_tit = $s['post_title'];
+		$slide_desc = apply_filters( 'the_content', $s['post_content'] );
+		if ( has_post_thumbnail($s['ID']) ) {
+			$slide_img = get_the_post_thumbnail($s['ID'],'full',array('class' => 'img-responsive'));
+		} else { $slide_img = ""; }
+		// indicators
+		$indicators_out .= ( $indicators == 1 ) ? '<li data-target="#carousel-'.$carousel['post_slug'].'" data-slide-to="'.$count.'" class="'.$active_class.'"></li>' : '';
+		// slides
+		$slides_out .= '
+			<div class="item'.$active_class.'"'.$slide_style.'>
+				'.$slide_img.'
+				<div class="carousel-caption">
+					'.$slide_desc.'
+				</div>
+			</div>
+		';
+		$count++;
+	}
+	$indicators_out .= '</ol>';
+	$slides_out .= '</div>';
+
+	// output
+	echo '<div id="carousel-'.$carousel['post_slug'].'" class="carousel slide" data-ride="carousel" data-interval="false">'.$indicators_out . $slides_out . $controls_out.'</div>';
+
+}
+endif;
