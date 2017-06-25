@@ -16,13 +16,13 @@ get_header(); ?>
 	// SLIDESHOW
 	////
 	?>
-		<section id="featured" class="home-block container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<?php _mbbasetheme_get_carousel($post->ID); ?>
-				</div>
+	<section id="featured" class="home-block container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<?php _mbbasetheme_get_carousel($post->ID); ?>
 			</div>
-		</section>
+		</div>
+	</section>
 
 	<?php
 	// NEWS
@@ -42,7 +42,7 @@ get_header(); ?>
 	if ( $news->have_posts() ) :
 	?>
 
-		<section id="news" class="home-block container-fluid">
+		<section id="news" class="home-block container">
 			<header class="row"><h2 class="col-sm-12"><?php _e('Last news','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<?php while ( $news->have_posts() ) : $news->the_post();
@@ -53,6 +53,35 @@ get_header(); ?>
 
 	<?php endif;
 
+	// MAP
+	////
+	?>
+		<section id="garden-map" class="home-block container">
+			<header class="row"><h2 class="col-sm-12"><?php _e('Map of community gardens in Madrid','_mbbasetheme') ?></h2></header>
+			<div class="row">
+				<div class="col-sm-12">
+					<?php $args = array(
+						'post_type' => 'garden',
+						'post_status' => "publish",
+						'layers_by' => "post_type",
+						'layers' => "garden",
+						'colors' => "#ff0",
+						'icons' => "",
+						'marker_type' => 'icon',
+						//'marker_radius' => 10,
+						//'marker_opacity' => 0.5,
+						//'marker_fillOpacity' => 0.5,
+						'popup_text' => 'excerpt'
+					);
+					wpmap_showmap($args); ?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12"><a href="<?php echo MB_BLOGTHEME; ?>/assets/images/mapa.pdf"><img src="<?php echo MB_BLOGTHEME; ?>/assets/images/home-map.png" alt="<?php _e('Descargar mapa en PDF','mbbasetheme'); ?>" /></a></div>
+			</div>
+		</section><!-- #map -->
+
+	<?php
 	// GARDENS
 	////
 	$args = array(
@@ -63,7 +92,7 @@ get_header(); ?>
 	if ( $gardens->have_posts() ) :
 	?>
 
-		<section id="gardens" class="home-block container-fluid">
+		<section id="gardens" class="home-block container">
 			<header class="row"><h2 class="col-sm-12"><?php _e('Last published gardens','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<?php while ( $gardens->have_posts() ) : $gardens->the_post();
