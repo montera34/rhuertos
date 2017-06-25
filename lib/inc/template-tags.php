@@ -183,7 +183,6 @@ function _mbbasetheme_get_carousel($post_id) {
 
 	// carousel vars
 	$carousel_h = get_post_meta( $carousel['ID'],'_carousel_height',true);
-	$slide_style = ( $carousel_h != '' ) ? ' style="max-height: '.$carousel_h.'px;"' : '';
 	// indicators and controls
 	$indicators = get_post_meta($carousel['ID'],'_carousel_indicators',true);
 	$controls = get_post_meta($carousel['ID'],'_carousel_controls',true);
@@ -209,9 +208,13 @@ function _mbbasetheme_get_carousel($post_id) {
 		$active_class = ( $count == 0 ) ? ' active' : '';
 		$slide_tit = $s['post_title'];
 		$slide_desc = apply_filters( 'the_content', $s['post_content'] );
+		$slide_bgcolor = get_post_meta( $s['ID'],'_slide_bgcolor',true);
 		if ( has_post_thumbnail($s['ID']) ) {
-			$slide_img = get_the_post_thumbnail($s['ID'],'full',array('class' => 'img-responsive'));
-		} else { $slide_img = ""; }
+			//$slide_img = get_the_post_thumbnail($s['ID'],'full',array('class' => 'img-responsive'));
+			$slide_img = '';
+			$slide_img_src = wp_get_attachment_image_src( get_post_thumbnail_id($s['ID']),'full' );
+			$slide_style = ' style="height: '.$carousel_h.'px; background-image: url('.$slide_img_src[0].'); background-repeat: no-repeat; background-size: cover; background-position: center center;"';
+		} else { $slide_img = ""; $slide_style = ' style="height: '.$carousel_h.'px; background-color: '.$slide_bgcolor.';"'; }
 		// indicators
 		$indicators_out .= ( $indicators == 1 ) ? '<li data-target="#carousel-'.$carousel['post_slug'].'" data-slide-to="'.$count.'" class="'.$active_class.'"></li>' : '';
 		// slides
