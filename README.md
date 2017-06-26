@@ -1,14 +1,10 @@
-# WordPress Starter Theme
+# WordPress Theme for Urban Community Gardens Network of Madrid
 
-Version: 4.2.2
+You can see this theme in action here: http://huertos.madrid.es
 
-## Author:
+Version 0.1.
 
-Matt Banks ( [@mattbanks](http://twitter.com/mattbanks) / [collectivthkg.com](http://collectivthkg.com) / [mattbanks.me](http://www.mattbanks.me) )
-
-## Summary
-
-WordPress Starter Theme for use as a starting template for building custom themes. Uses SCSS and AutoPrefixr, HTML5 Boilerplate with Modernizr and Normalize.css, and Grunt for all processing tasks. Syncs changes across local development devices with BrowserSync. Tested up to WordPress 4.0 RC1.
+This theme is based on [WordPress Starter Theme](https://github.com/mattbanks/WordPress-Starter-Theme) v4.2.2.
 
 ## Usage
 
@@ -36,15 +32,12 @@ Supports [bower](https://github.com/bower/bower) to install and manage JavaScrip
 
 The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/grunt-rsync). The Gruntfile includes setups for staging and production - edit your paths and host, then run `grunt deploy:staging` or `grunt deploy:production` to deploy your files via rsync.
 
-### Features
+## Plugins
 
-1. Normalized stylesheet for cross-browser compatibility using Normalize.css version 3 (IE8+)
-2. Easy to customize
-3. Flexible grid based on work from [Chris Coyier](https://twitter.com/chriscoyier)
-4. Media Queries can be nested in each selector using SASS
-5. SCSS with plenty of mixins ready to go
-6. Grunt for processing all SASS, JavaScript and images, and cross-device refreshing with BrowserSync
-7. Much much more
+### Needed plugins
+
+* [Pods Framework](http://www.podsframework.org/)
+* [WPMap](https://github.com/skotperez/wpmap)
 
 ### Suggested Plugins
 
@@ -52,18 +45,8 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 * [Google Analytics for WordPress by Yoast](http://wordpress.org/extend/plugins/google-analytics-for-wordpress/)
 * [W3 Total Cache](http://wordpress.org/extend/plugins/w3-total-cache/)
 * [Gravity Forms](http://www.gravityforms.com/)
-* [Pods Framework](http://www.podsframework.org/)
 
 ![dependencies](https://david-dm.org/mattbanks/WordPress-Starter-Theme.png)
-
-### Contributing:
-
-Anyone and everyone is welcome to contribute! Check out the [Contributing Guidelines](CONTRIBUTING.md).
-
-### Contributors:
-
-- [ddropik](https://github.com/ddropik)
-- [jjmu15](https://github.com/jjmu15)
 
 ### Credits
 
