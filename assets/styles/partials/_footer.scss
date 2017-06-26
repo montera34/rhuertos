@@ -4,6 +4,13 @@
 
 .site-footer {
 	#epi-menu { padding: 10px 0 0 0; }
+	#epi-meta {
+		padding-bottom: 10px;
+		.space { padding-top: 18px;}
+	}
+	#epi-widgets {
+		a { text-decoration: underline;}
+	}
 	background-color: $bargl-bg;
 	color: $bargl-fg;
 	.barw {

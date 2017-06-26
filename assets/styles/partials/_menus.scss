@@ -16,5 +16,9 @@
 	}
 }
 .site-footer {
-	.navbar { margin-bottom: 10px; }
+	.navbar {
+		margin-bottom: 10px;
+		font-weight: 700;
+		.navbar-collapse { margin-left: -30px; }
+	}
 }

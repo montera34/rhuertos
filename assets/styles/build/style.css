@@ -187,6 +187,15 @@ h1, h2, h3, h4, h5, h6 {
 .site-footer #epi-menu {
   padding: 10px 0 0 0;
 }
+.site-footer #epi-meta {
+  padding-bottom: 10px;
+}
+.site-footer #epi-meta .space {
+  padding-top: 18px;
+}
+.site-footer #epi-widgets a {
+  text-decoration: underline;
+}
 .site-footer .barw {
   padding: 10px 0 0 0;
 }
@@ -211,6 +220,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer .navbar {
   margin-bottom: 10px;
+  font-weight: 700;
+}
+.site-footer .navbar .navbar-collapse {
+  margin-left: -30px;
 }
 
 /* ==========================================================================
