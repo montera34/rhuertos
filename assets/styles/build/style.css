@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
    Menus
    ========================================================================== */
 .site-header .current-menu-item {
-  color: #050604;
+  color: #000;
   text-decoration: underline;
 }
 .site-header .bargl {
@@ -297,6 +297,25 @@ embed,
 iframe,
 object {
   max-width: 100%;
+}
+
+/* ==========================================================================
+   Carousel slides
+   ========================================================================== */
+.carousel-caption-inner {
+  font: 700 13px "Museo", sans-serif;
+  padding: 50px;
+}
+.carousel-caption-inner h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.carousel-caption-inner h3:before, .carousel-caption-inner h3:after {
+  content: '·';
+}
+
+.carousel-caption-bg {
+  background-color: rgba(43, 52, 35, 0.6);
 }
 
 /* ==========================================================================

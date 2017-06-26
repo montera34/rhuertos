@@ -5,18 +5,13 @@
 // Font Face
 // @include fontface('FONT_NAME', 'assets/fonts/', 'FONT_FAMILY');
 
-// Structure
-//$pageWidth: 1000px;
-
-// Text Selection
-$selectionColor: orange;
-
 // Colors
 $brand-primary: #2b3423;
+$brand-primary-transparent: rgba(43,52,35,0.6);
 $body-bg: #eee7d4;
 $text-color: $brand-primary;
 $link-color: $brand-primary;
-$link-hover-color: darken($link-color, 15%);
+$link-hover-color: #000;
 
 $active-color: $link-hover-color;
 
@@ -28,3 +23,6 @@ $bargd-fg: #fff;
 
 $bargl-bg: #e2dbb5;
 $bargl-fg: $brand-primary;
+
+// Sizes
+$font-base-size: 13px;

@@ -199,16 +199,22 @@ function _mbbasetheme_get_carousel($post_id) {
 				<span class="sr-only">'.__('Next','_mbbasetheme').'</span>
 			</a>
 		';
-	} else { $controls_out = ''; }
+	} else {
+		$controls_out = '';
+	}
+
 	// slides
 	$slides = get_post_meta( $carousel['ID'],'_carousel_diapos',false);
 	$slides_out = '<div class="carousel-inner" role="listbox">';
 	$count = 0;
 	foreach ( $slides as $s ) {
 		$active_class = ( $count == 0 ) ? ' active' : '';
-		$slide_tit = $s['post_title'];
 		$slide_desc = apply_filters( 'the_content', $s['post_content'] );
 		$slide_bgcolor = get_post_meta( $s['ID'],'_slide_bgcolor',true);
+		$slide_show_tit = get_post_meta( $s['ID'],'_slide_show_tit',true);
+		$slide_tit = ( $slide_show_tit == 1 ) ? '<h3>'.$s['post_title'].'</h3>' : '';
+		$slide_caption_bg = get_post_meta( $s['ID'],'_slide_caption_bg',true);
+		$slide_caption_class = ( $slide_caption_bg == 1 ) ? ' carousel-caption-bg' : '';
 		if ( has_post_thumbnail($s['ID']) ) {
 			//$slide_img = get_the_post_thumbnail($s['ID'],'full',array('class' => 'img-responsive'));
 			$slide_img = '';
@@ -222,7 +228,9 @@ function _mbbasetheme_get_carousel($post_id) {
 			<div class="item'.$active_class.'"'.$slide_style.'>
 				'.$slide_img.'
 				<div class="carousel-caption">
-					'.$slide_desc.'
+					<div class="carousel-caption-inner'.$slide_caption_class.'">
+						'.$slide_tit.$slide_desc.'
+					</div>
 				</div>
 			</div>
 		';

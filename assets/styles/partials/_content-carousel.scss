@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Carousel slides
+   ========================================================================== */
+
+.carousel-caption-inner {
+	font: 700 $font-base-size 'Museo', sans-serif;
+	padding: 50px;
+	h3 {
+		font-size: $font-base-size;
+		text-transform: uppercase;
+		&:before, &:after { content: '·'; }
+
+	}
+}
+.carousel-caption-bg {
+	background-color: $brand-primary-transparent;
+}
