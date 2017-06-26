@@ -15,16 +15,8 @@ get_header(); ?>
 	<?php
 	// SLIDESHOW
 	////
-	?>
-	<section id="featured" class="home-block container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<?php _mbbasetheme_get_carousel($post->ID); ?>
-			</div>
-		</div>
-	</section>
+	get_template_part( 'content', 'carousel' );
 
-	<?php
 	// NEWS
 	////
 	$args = array(
@@ -42,7 +34,7 @@ get_header(); ?>
 	if ( $news->have_posts() ) :
 	?>
 
-		<section id="news" class="home-block container">
+		<section id="news" class="block container">
 			<header class="row"><h2 class="col-sm-12"><?php _e('Last news','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<?php while ( $news->have_posts() ) : $news->the_post();
@@ -56,7 +48,7 @@ get_header(); ?>
 	// MAP
 	////
 	?>
-		<section id="garden-map" class="home-block container">
+		<section id="garden-map" class="block container">
 			<header class="row"><h2 class="col-sm-12"><?php _e('Map of community gardens in Madrid','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<div class="col-sm-12">
@@ -92,7 +84,7 @@ get_header(); ?>
 	if ( $gardens->have_posts() ) :
 	?>
 
-		<section id="gardens" class="home-block container">
+		<section id="gardens" class="block container">
 			<header class="row"><h2 class="col-sm-12"><?php _e('Last published gardens','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<?php while ( $gardens->have_posts() ) : $gardens->the_post();
