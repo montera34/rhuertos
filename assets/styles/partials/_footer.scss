@@ -3,10 +3,11 @@
    ========================================================================== */
 
 .site-footer {
+	#epi-menu { padding: 10px 0 0 0; }
 	background-color: $bargl-bg;
 	color: $bargl-fg;
 	.barw {
-		&-brand { padding: 15px 0; }
-		
+		padding: 10px 0 0 0;
+		&-brand { line-height: 30px; }
 	}
 }

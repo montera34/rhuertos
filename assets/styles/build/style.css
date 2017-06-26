@@ -176,9 +176,6 @@ h1, h2, h3, h4, h5, h6 {
 .site-header .barw .row {
   padding: 20px 0;
 }
-.site-header .bargl .navbar-collapse {
-  text-transform: uppercase;
-}
 
 /* ==========================================================================
    Footer
@@ -187,8 +184,106 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #e2dbb5;
   color: #2b3423;
 }
+.site-footer #epi-menu {
+  padding: 10px 0 0 0;
+}
+.site-footer .barw {
+  padding: 10px 0 0 0;
+}
 .site-footer .barw-brand {
-  padding: 15px 0;
+  line-height: 30px;
+}
+
+/* ==========================================================================
+   Menus
+   ========================================================================== */
+.site-header .current-menu-item {
+  color: #050604;
+  text-decoration: underline;
+}
+.site-header .bargl {
+  font-family: 'Museo';
+  font-weight: 700;
+}
+.site-header .bargl .navbar-collapse {
+  text-transform: uppercase;
+}
+
+.site-footer .navbar {
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   Posts and pages
+   ========================================================================== */
+body.page .block {
+  margin-bottom: 50px;
+}
+
+.byline,
+.updated {
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.wp-caption {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.site-main .gallery {
+  margin-bottom: 1.5em;
+}
+
+.site-main .gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%;
+}
+
+.site-main .gallery dd,
+.site-main .gallery figcaption {
+  margin: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%;
 }
 
 /* ==========================================================================
@@ -202,7 +297,7 @@ body.home h2 {
 body.home h2:before, body.home h2:after {
   content: '·';
 }
-body.home .home-block {
+body.home .block {
   margin-bottom: 50px;
 }
 body.home .actividad h3 {

@@ -2,12 +2,15 @@
    Posts and pages
    ========================================================================== */
 
+body.page {
+	.block {
+		margin-bottom: 50px;
+	}
+
+}
 .sticky {
 }
 
-.hentry {
-	margin: 0 0 1.5em;
-}
 
 .byline,
 .updated {
@@ -17,12 +20,6 @@
 .single .byline,
 .group-blog .byline {
 	display: inline;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
 }
 
 .page-links {

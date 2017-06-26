@@ -16,6 +16,9 @@ $brand-primary: #2b3423;
 $body-bg: #eee7d4;
 $text-color: $brand-primary;
 $link-color: $brand-primary;
+$link-hover-color: darken($link-color, 15%);
+
+$active-color: $link-hover-color;
 
 $barw-bg: #fff;
 $barw-fg: $brand-primary;
