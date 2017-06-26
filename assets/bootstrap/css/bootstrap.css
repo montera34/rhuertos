@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=b079a795f231f790cb5392237d1d1762)
- * Config saved to config.json and https://gist.github.com/b079a795f231f790cb5392237d1d1762
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=0bcf990ff31b0d56d997f0988eaeb95a)
+ * Config saved to config.json and https://gist.github.com/0bcf990ff31b0d56d997f0988eaeb95a
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -3036,7 +3036,7 @@ tbody.collapse.in {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 30px;
   margin-bottom: 18px;
   border: 1px solid transparent;
 }
@@ -3144,10 +3144,10 @@ tbody.collapse.in {
 }
 .navbar-brand {
   float: left;
-  padding: 16px 15px;
+  padding: 6px 15px;
   font-size: 17px;
   line-height: 18px;
-  height: 50px;
+  height: 30px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -3167,8 +3167,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: -2px;
+  margin-bottom: -2px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3192,7 +3192,7 @@ tbody.collapse.in {
   }
 }
 .navbar-nav {
-  margin: 8px -15px;
+  margin: 3px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -3231,8 +3231,8 @@ tbody.collapse.in {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 }
 .navbar-form {
@@ -3243,8 +3243,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -3329,20 +3329,20 @@ tbody.collapse.in {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .navbar-btn.btn-xs {
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .navbar-text {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 @media (min-width: 768px) {
   .navbar-text {
