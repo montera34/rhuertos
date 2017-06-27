@@ -3,9 +3,10 @@
    ========================================================================== */
 
 body.home,
-body.page-template-page-blog {
+body.page-template-page-blog,
+body.page-template-page-gardens {
 	h2 {
-		@include sec-tit(16px);
+		@include sec-tit(16px,underline);
 	}
 	.block {
 		margin-bottom: 50px;
@@ -25,22 +26,64 @@ body.page-template-page-blog {
 		}
 	}
 	.garden {
+		margin-bottom: 30px;
+		&-heading {
+			display: table-row;
+		}
 		h3 {
 			font: 900 15px/1.1em 'Lato', sans-serif;
-			margin: 10px 0 0 0;
+			margin: 0;
 			text-transform: uppercase;
+		}
+		&-text {
+			padding: 7px 10px;
+			display: table;
+			width: 100%;
+			height: 100px;
 		}
 		&-address {
 			font: 400 14px 'Lato', sans-serif;
 		}
 		&-district {
-			font: 700 14px 'Lato', sans-serif;
+			display: table-cell;
+			vertical-align: bottom;
+			&-inner {
+				@include filter(inherit);
+			}
+		}
+		&-img {
+			position: relative;
+			figcaption {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
 		}
 		&-icon {
-			text-align: center;
-			margin: 20px 0 0 0;
-		
-		}
+		}	
 	}
 
+}
+body.page-template-page-gardens {
+	.garden-filters {
+		margin-top: 18px;
+		margin-bottom: 18px;
+	}
+	.garden-filter-tit {
+		@include sec-tit(16px,none);
+		color: #fff;
+		background-color: $brand-primary;
+		display: inline-block;
+		padding: 10px 25px;
+		margin-bottom: 9px;
+	}
+	.garden-filter {
+		&-district {
+			a { @include filter(#333); }
+		}
+		&-typology {
+			a { @include filter(transparent); }
+		}
+	}
 }

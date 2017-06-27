@@ -31,10 +31,19 @@
 }
 
 /* H2 */
-@mixin sec-tit($font-size) {
+@mixin sec-tit($font-size,$text-decoration) {
 	font: 700 $font-size 'Museo', sans-serif;
 	text-transform: uppercase;
-	text-decoration: underline;
+	text-decoration: $text-decoration;
 	&:before, &:after { content: '·'; }
 }
 
+/* FILTERS */
+@mixin filter($border-color) {
+	display: inline-block;
+	font: 400 14px 'Lato', sans-serif;
+	border: 1px solid;
+	border-color: $border-color;
+	padding: 3px 5px;
+	text-transform: uppercase;
+}

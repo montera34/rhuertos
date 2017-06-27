@@ -29,6 +29,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  */
 /* Box shadow */
 /* H2 */
+/* FILTERS */
 /* ==========================================================================
    Variables
    ========================================================================== */
@@ -312,31 +313,41 @@ object {
    Home Page Template
    ========================================================================== */
 body.home h2,
-body.page-template-page-blog h2 {
+body.page-template-page-blog h2,
+body.page-template-page-gardens h2 {
   font: 700 16px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: underline;
 }
 body.home h2:before, body.home h2:after,
 body.page-template-page-blog h2:before,
-body.page-template-page-blog h2:after {
+body.page-template-page-blog h2:after,
+body.page-template-page-gardens h2:before,
+body.page-template-page-gardens h2:after {
   content: '·';
 }
 body.home .block,
-body.page-template-page-blog .block {
+body.page-template-page-blog .block,
+body.page-template-page-gardens .block {
   margin-bottom: 50px;
 }
 body.home .actividad h3, body.home .new h3, body.home .download h3,
 body.page-template-page-blog .actividad h3,
 body.page-template-page-blog .new h3,
-body.page-template-page-blog .download h3 {
+body.page-template-page-blog .download h3,
+body.page-template-page-gardens .actividad h3,
+body.page-template-page-gardens .new h3,
+body.page-template-page-gardens .download h3 {
   font: 900 15px/1.1em 'Lato', sans-serif;
   margin: 10px 0 0 0;
 }
 body.home .actividad-date, body.home .new-date, body.home .download-date,
 body.page-template-page-blog .actividad-date,
 body.page-template-page-blog .new-date,
-body.page-template-page-blog .download-date {
+body.page-template-page-blog .download-date,
+body.page-template-page-gardens .actividad-date,
+body.page-template-page-gardens .new-date,
+body.page-template-page-gardens .download-date {
   font: 400 14px 'Lato', sans-serif;
 }
 body.home .actividad-org, body.home .actividad-file, body.home .new-org, body.home .new-file, body.home .download-org, body.home .download-file,
@@ -345,28 +356,108 @@ body.page-template-page-blog .actividad-file,
 body.page-template-page-blog .new-org,
 body.page-template-page-blog .new-file,
 body.page-template-page-blog .download-org,
-body.page-template-page-blog .download-file {
+body.page-template-page-blog .download-file,
+body.page-template-page-gardens .actividad-org,
+body.page-template-page-gardens .actividad-file,
+body.page-template-page-gardens .new-org,
+body.page-template-page-gardens .new-file,
+body.page-template-page-gardens .download-org,
+body.page-template-page-gardens .download-file {
   text-align: center;
   margin: 20px 0 0 0;
 }
+body.home .garden,
+body.page-template-page-blog .garden,
+body.page-template-page-gardens .garden {
+  margin-bottom: 30px;
+}
+body.home .garden-heading,
+body.page-template-page-blog .garden-heading,
+body.page-template-page-gardens .garden-heading {
+  display: table-row;
+}
 body.home .garden h3,
-body.page-template-page-blog .garden h3 {
+body.page-template-page-blog .garden h3,
+body.page-template-page-gardens .garden h3 {
   font: 900 15px/1.1em 'Lato', sans-serif;
-  margin: 10px 0 0 0;
+  margin: 0;
   text-transform: uppercase;
 }
+body.home .garden-text,
+body.page-template-page-blog .garden-text,
+body.page-template-page-gardens .garden-text {
+  padding: 7px 10px;
+  display: table;
+  width: 100%;
+  height: 100px;
+}
 body.home .garden-address,
-body.page-template-page-blog .garden-address {
+body.page-template-page-blog .garden-address,
+body.page-template-page-gardens .garden-address {
   font: 400 14px 'Lato', sans-serif;
 }
 body.home .garden-district,
-body.page-template-page-blog .garden-district {
-  font: 700 14px 'Lato', sans-serif;
+body.page-template-page-blog .garden-district,
+body.page-template-page-gardens .garden-district {
+  display: table-cell;
+  vertical-align: bottom;
 }
-body.home .garden-icon,
-body.page-template-page-blog .garden-icon {
+body.home .garden-district-inner,
+body.page-template-page-blog .garden-district-inner,
+body.page-template-page-gardens .garden-district-inner {
+  display: inline-block;
+  font: 400 14px 'Lato', sans-serif;
+  border: 1px solid;
+  border-color: inherit;
+  padding: 3px 5px;
+  text-transform: uppercase;
+}
+body.home .garden-img,
+body.page-template-page-blog .garden-img,
+body.page-template-page-gardens .garden-img {
+  position: relative;
+}
+body.home .garden-img figcaption,
+body.page-template-page-blog .garden-img figcaption,
+body.page-template-page-gardens .garden-img figcaption {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
   text-align: center;
-  margin: 20px 0 0 0;
+}
+
+body.page-template-page-gardens .garden-filters {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+body.page-template-page-gardens .garden-filter-tit {
+  font: 700 16px "Museo", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #2b3423;
+  display: inline-block;
+  padding: 10px 25px;
+  margin-bottom: 9px;
+}
+body.page-template-page-gardens .garden-filter-tit:before, body.page-template-page-gardens .garden-filter-tit:after {
+  content: '·';
+}
+body.page-template-page-gardens .garden-filter-district a {
+  display: inline-block;
+  font: 400 14px 'Lato', sans-serif;
+  border: 1px solid;
+  border-color: #333;
+  padding: 3px 5px;
+  text-transform: uppercase;
+}
+body.page-template-page-gardens .garden-filter-typology a {
+  display: inline-block;
+  font: 400 14px 'Lato', sans-serif;
+  border: 1px solid;
+  border-color: transparent;
+  padding: 3px 5px;
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
