@@ -1,7 +1,7 @@
 <?php
 $loop_prefix = 'new';
 $img_size = 'medium';
-$loop_classes = 'col-sm-3';
+$loop_classes = 'col-sm-3 '.$loop_prefix;
 
 $loop_perma = get_permalink();
 if ( has_post_thumbnail() ) {

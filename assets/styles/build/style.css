@@ -28,6 +28,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * @include fontface('family', 'assets/fonts/', 'myfontname');
  */
 /* Box shadow */
+/* H2 */
 /* ==========================================================================
    Variables
    ========================================================================== */
@@ -77,12 +78,12 @@ img {
 /* ==========================================================================
    Typography
    ========================================================================== */
-h1.entry-title, .hentry h2 {
+h1.entry-title, .hentry h2, .sec-title h2 {
   font-size: 16px;
   text-transform: uppercase;
   text-decoration: underline;
 }
-h1.entry-title:before, h1.entry-title:after, .hentry h2:before, .hentry h2:after {
+h1.entry-title:before, h1.entry-title:after, .hentry h2:before, .hentry h2:after, .sec-title h2:before, .sec-title h2:after {
   content: '·';
 }
 
@@ -310,44 +311,67 @@ object {
 /* ==========================================================================
    Home Page Template
    ========================================================================== */
-body.home h2 {
-  font: 700 16px 'Museo', sans-serif;
+body.home h2,
+body.page-template-page-blog h2 {
+  font: 700 16px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: underline;
 }
-body.home h2:before, body.home h2:after {
+body.home h2:before, body.home h2:after,
+body.page-template-page-blog h2:before,
+body.page-template-page-blog h2:after {
   content: '·';
 }
-body.home .block {
+body.home .block,
+body.page-template-page-blog .block {
   margin-bottom: 50px;
 }
-body.home .actividad h3 {
-  font: 900 19px/1.1em 'Lato', sans-serif;
+body.home .actividad h3, body.home .new h3, body.home .download h3,
+body.page-template-page-blog .actividad h3,
+body.page-template-page-blog .new h3,
+body.page-template-page-blog .download h3 {
+  font: 900 15px/1.1em 'Lato', sans-serif;
   margin: 10px 0 0 0;
 }
-body.home .actividad-date {
+body.home .actividad-date, body.home .new-date, body.home .download-date,
+body.page-template-page-blog .actividad-date,
+body.page-template-page-blog .new-date,
+body.page-template-page-blog .download-date {
   font: 400 14px 'Lato', sans-serif;
 }
-body.home .actividad-org {
+body.home .actividad-org, body.home .actividad-file, body.home .new-org, body.home .new-file, body.home .download-org, body.home .download-file,
+body.page-template-page-blog .actividad-org,
+body.page-template-page-blog .actividad-file,
+body.page-template-page-blog .new-org,
+body.page-template-page-blog .new-file,
+body.page-template-page-blog .download-org,
+body.page-template-page-blog .download-file {
   text-align: center;
   margin: 20px 0 0 0;
 }
-body.home .garden h3 {
-  font: 900 19px/1.1em 'Lato', sans-serif;
+body.home .garden h3,
+body.page-template-page-blog .garden h3 {
+  font: 900 15px/1.1em 'Lato', sans-serif;
   margin: 10px 0 0 0;
   text-transform: uppercase;
 }
-body.home .garden-address {
+body.home .garden-address,
+body.page-template-page-blog .garden-address {
   font: 400 14px 'Lato', sans-serif;
 }
-body.home .garden-district {
+body.home .garden-district,
+body.page-template-page-blog .garden-district {
   font: 700 14px 'Lato', sans-serif;
 }
-body.home .garden-icon {
+body.home .garden-icon,
+body.page-template-page-blog .garden-icon {
   text-align: center;
   margin: 20px 0 0 0;
 }
 
+/* ==========================================================================
+   Blog pages
+   ========================================================================== */
 /* ==========================================================================
    Forms
    ========================================================================== */

@@ -30,4 +30,11 @@
   box-shadow: $shadows;
 }
 
+/* H2 */
+@mixin sec-tit($font-size) {
+	font: 700 $font-size 'Museo', sans-serif;
+	text-transform: uppercase;
+	text-decoration: underline;
+	&:before, &:after { content: '·'; }
+}
 

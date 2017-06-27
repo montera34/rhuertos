@@ -2,25 +2,23 @@
    Home Page Template
    ========================================================================== */
 
-body.home {
+body.home,
+body.page-template-page-blog {
 	h2 {
-		font: 700 16px 'Museo', sans-serif;
-		text-transform: uppercase;
-		text-decoration: underline;
-		&:before, &:after { content: '·'; }
+		@include sec-tit(16px);
 	}
 	.block {
 		margin-bottom: 50px;
 	}
-	.actividad {
+	.actividad,.new,.download {
 		h3 {
-			font: 900 19px/1.1em 'Lato', sans-serif;
+			font: 900 15px/1.1em 'Lato', sans-serif;
 			margin: 10px 0 0 0;
 		}
 		&-date {
 			font: 400 14px 'Lato', sans-serif;
 		}
-		&-org {
+		&-org,&-file {
 			text-align: center;
 			margin: 20px 0 0 0;
 		
@@ -28,7 +26,7 @@ body.home {
 	}
 	.garden {
 		h3 {
-			font: 900 19px/1.1em 'Lato', sans-serif;
+			font: 900 15px/1.1em 'Lato', sans-serif;
 			margin: 10px 0 0 0;
 			text-transform: uppercase;
 		}
