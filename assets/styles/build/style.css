@@ -23,22 +23,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
    Mixins
    ========================================================================== */
 /*
- * Mixin for easy media queries
- * @include bp(tablet) { SCSS here };
-*/
-/*
- * Mixin for clearfix
- * @include clearfix;
-*/
-/*
- * Mixin for basic CSS triangles
- * @include triangle(up, #000, 50px)
-*/
-/*
  * @font-face mixin
  * Bulletproof font-face via Font Squirrel
  * @include fontface('family', 'assets/fonts/', 'myfontname');
  */
+/* Box shadow */
 /* ==========================================================================
    Variables
    ========================================================================== */
@@ -88,6 +77,21 @@ img {
 /* ==========================================================================
    Typography
    ========================================================================== */
+h1.entry-title, .hentry h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+h1.entry-title:before, h1.entry-title:after, .hentry h2:before, .hentry h2:after {
+  content: '·';
+}
+
+.hentry h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
@@ -149,21 +153,6 @@ h1, h2, h3, h4, h5, h6 {
 .site-content:after,
 .site-footer:after {
   clear: both;
-}
-
-/* ==========================================================================
-   Infinite Scroll
-   ========================================================================== */
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer {
-  display: block;
 }
 
 /* ==========================================================================
@@ -357,6 +346,16 @@ body.home .garden-district {
 body.home .garden-icon {
   text-align: center;
   margin: 20px 0 0 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+form .btn {
+  text-transform: uppercase;
+}
+form input, form textarea {
+  box-shadow: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

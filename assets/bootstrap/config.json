@@ -62,7 +62,7 @@
     "@table-bg-hover": "#f5f5f5",
     "@table-bg-active": "@table-bg-hover",
     "@table-border-color": "#ddd",
-    "@btn-font-weight": "normal",
+    "@btn-font-weight": "700",
     "@btn-default-color": "#333",
     "@btn-default-bg": "#fff",
     "@btn-default-border": "#ccc",
@@ -415,5 +415,5 @@
     "collapse.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=3411839c8e5d3b23c0938a8c111e687c"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=565839335751ed51aa6b3c2659455d56"
 }
