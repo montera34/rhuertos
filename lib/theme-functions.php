@@ -109,6 +109,7 @@ function mb_imagelink_setup() {
  */
 function mb_scripts() {
 	wp_enqueue_style( '_mbbasetheme-fonts', get_template_directory_uri().'/fonts.css' );
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/assets/fontawesome/css/font-awesome.min.css',array('_mbbasetheme-fonts'),'4.7.0' );
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/assets/bootstrap/css/bootstrap.min.css',array('_mbbasetheme-fonts'),'3.3.7' );
 	wp_enqueue_style( '_mbbasetheme-style', get_stylesheet_uri(),array('bootstrap-css') );
 
