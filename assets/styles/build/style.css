@@ -314,6 +314,7 @@ object {
    ========================================================================== */
 body.home h2,
 body.page-template-page-blog h2,
+body.page-template-page-map h2,
 body.page-template-page-gardens h2 {
   font: 700 16px "Museo", sans-serif;
   text-transform: uppercase;
@@ -322,12 +323,15 @@ body.page-template-page-gardens h2 {
 body.home h2:before, body.home h2:after,
 body.page-template-page-blog h2:before,
 body.page-template-page-blog h2:after,
+body.page-template-page-map h2:before,
+body.page-template-page-map h2:after,
 body.page-template-page-gardens h2:before,
 body.page-template-page-gardens h2:after {
   content: '·';
 }
 body.home .block,
 body.page-template-page-blog .block,
+body.page-template-page-map .block,
 body.page-template-page-gardens .block {
   margin-bottom: 50px;
 }
@@ -335,6 +339,9 @@ body.home .actividad h3, body.home .new h3, body.home .download h3,
 body.page-template-page-blog .actividad h3,
 body.page-template-page-blog .new h3,
 body.page-template-page-blog .download h3,
+body.page-template-page-map .actividad h3,
+body.page-template-page-map .new h3,
+body.page-template-page-map .download h3,
 body.page-template-page-gardens .actividad h3,
 body.page-template-page-gardens .new h3,
 body.page-template-page-gardens .download h3 {
@@ -345,6 +352,9 @@ body.home .actividad-date, body.home .new-date, body.home .download-date,
 body.page-template-page-blog .actividad-date,
 body.page-template-page-blog .new-date,
 body.page-template-page-blog .download-date,
+body.page-template-page-map .actividad-date,
+body.page-template-page-map .new-date,
+body.page-template-page-map .download-date,
 body.page-template-page-gardens .actividad-date,
 body.page-template-page-gardens .new-date,
 body.page-template-page-gardens .download-date {
@@ -357,6 +367,12 @@ body.page-template-page-blog .new-org,
 body.page-template-page-blog .new-file,
 body.page-template-page-blog .download-org,
 body.page-template-page-blog .download-file,
+body.page-template-page-map .actividad-org,
+body.page-template-page-map .actividad-file,
+body.page-template-page-map .new-org,
+body.page-template-page-map .new-file,
+body.page-template-page-map .download-org,
+body.page-template-page-map .download-file,
 body.page-template-page-gardens .actividad-org,
 body.page-template-page-gardens .actividad-file,
 body.page-template-page-gardens .new-org,
@@ -368,16 +384,19 @@ body.page-template-page-gardens .download-file {
 }
 body.home .garden,
 body.page-template-page-blog .garden,
+body.page-template-page-map .garden,
 body.page-template-page-gardens .garden {
   margin-bottom: 30px;
 }
 body.home .garden-heading,
 body.page-template-page-blog .garden-heading,
+body.page-template-page-map .garden-heading,
 body.page-template-page-gardens .garden-heading {
   display: table-row;
 }
 body.home .garden h3,
 body.page-template-page-blog .garden h3,
+body.page-template-page-map .garden h3,
 body.page-template-page-gardens .garden h3 {
   font: 900 15px/1.1em 'Lato', sans-serif;
   margin: 0;
@@ -385,6 +404,7 @@ body.page-template-page-gardens .garden h3 {
 }
 body.home .garden-text,
 body.page-template-page-blog .garden-text,
+body.page-template-page-map .garden-text,
 body.page-template-page-gardens .garden-text {
   padding: 7px 10px;
   display: table;
@@ -393,17 +413,20 @@ body.page-template-page-gardens .garden-text {
 }
 body.home .garden-address,
 body.page-template-page-blog .garden-address,
+body.page-template-page-map .garden-address,
 body.page-template-page-gardens .garden-address {
   font: 400 14px 'Lato', sans-serif;
 }
 body.home .garden-district,
 body.page-template-page-blog .garden-district,
+body.page-template-page-map .garden-district,
 body.page-template-page-gardens .garden-district {
   display: table-cell;
   vertical-align: bottom;
 }
 body.home .garden-district-inner,
 body.page-template-page-blog .garden-district-inner,
+body.page-template-page-map .garden-district-inner,
 body.page-template-page-gardens .garden-district-inner {
   display: inline-block;
   font: 400 14px 'Lato', sans-serif;
@@ -414,16 +437,48 @@ body.page-template-page-gardens .garden-district-inner {
 }
 body.home .garden-img,
 body.page-template-page-blog .garden-img,
+body.page-template-page-map .garden-img,
 body.page-template-page-gardens .garden-img {
   position: relative;
 }
 body.home .garden-img figcaption,
 body.page-template-page-blog .garden-img figcaption,
+body.page-template-page-map .garden-img figcaption,
 body.page-template-page-gardens .garden-img figcaption {
   position: absolute;
   bottom: 20px;
   width: 100%;
   text-align: center;
+}
+body.home .mapdown,
+body.page-template-page-blog .mapdown,
+body.page-template-page-map .mapdown,
+body.page-template-page-gardens .mapdown {
+  margin-top: 18px;
+  position: relative;
+}
+body.home .mapdown a,
+body.page-template-page-blog .mapdown a,
+body.page-template-page-map .mapdown a,
+body.page-template-page-gardens .mapdown a {
+  display: block;
+  padding: 25px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+body.home .mapdown a:hover,
+body.page-template-page-blog .mapdown a:hover,
+body.page-template-page-map .mapdown a:hover,
+body.page-template-page-gardens .mapdown a:hover {
+  background-color: white;
+}
+body.home .mapdown-caption,
+body.page-template-page-blog .mapdown-caption,
+body.page-template-page-map .mapdown-caption,
+body.page-template-page-gardens .mapdown-caption {
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  width: 100%;
 }
 
 body.page-template-page-gardens .garden-filters {

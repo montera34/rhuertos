@@ -4,6 +4,7 @@
 
 body.home,
 body.page-template-page-blog,
+body.page-template-page-map,
 body.page-template-page-gardens {
 	h2 {
 		@include sec-tit(16px,underline);
@@ -63,7 +64,24 @@ body.page-template-page-gardens {
 		&-icon {
 		}	
 	}
-
+	.mapdown {
+		margin-top: 18px;
+		position: relative;
+		a {
+			display: block;
+			padding: 25px 0;
+			background-color: rgba(255,255,255,0.7);
+			&:hover {
+				background-color: rgba(255,255,255,1);
+			}
+		}
+		&-caption {
+			position: absolute;
+			bottom: 30px;
+			text-align: center;
+			width: 100%;
+		}
+	}
 }
 body.page-template-page-gardens {
 	.garden-filters {

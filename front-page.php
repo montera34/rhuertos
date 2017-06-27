@@ -69,7 +69,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12"><a href="<?php echo MB_BLOGTHEME; ?>/assets/images/mapa.pdf"><img src="<?php echo MB_BLOGTHEME; ?>/assets/images/home-map.png" alt="<?php _e('Descargar mapa en PDF','mbbasetheme'); ?>" /></a></div>
+				<div class="col-sm-12"><div class="mapdown"><img src="<?php echo MB_BLOGTHEME; ?>/assets/images/mapa.huertos.comunitarios.madrid-v.161118-part.png" alt="<?php _e('Download the map in PDF format','mbbasetheme'); ?>" /><div class="mapdown-caption"><a href="<?php echo MB_BLOGTHEME; ?>/assets/images/mapa.huertos.comunitarios.madrid-v.161118.pdf"><i class="fa fa-5x fa-arrow-down"></i> <i class="fa fa-5x fa-map"></i><br /><?php _e('Download the map in PDF format','mbbasetheme'); ?></a></div></div></div>
 			</div>
 		</section><!-- #map -->
 
