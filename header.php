@@ -42,7 +42,7 @@
 						<a href="<?php echo esc_url( home_url( '/' )); ?>"><img src="<?php echo MB_BLOGTHEME; ?>/assets/images/logo.huertos.madrid.png" alt="<?php echo MB_BLOGNAME; ?>" /></a>
 					</div>
 					<div class="col-sm-3 col-sm-offset-3 hidden-xs">
-						<?php $search_label = __("Busca huertos","_mbbasetheme");
+						<?php $search_label = __("Search gardens","_mbbasetheme");
 						_mbbasetheme_get_searchform('huertos','pull-right',false,$search_label); ?>
 					</div>
 				</div>
