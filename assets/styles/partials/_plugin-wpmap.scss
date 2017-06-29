@@ -1,0 +1,42 @@
+/* ==========================================================================
+   WPMap Plugin
+   ========================================================================== */
+
+.close {
+	&:hover {
+		color: #fff;
+		background-color: $link-hover-color;
+	}
+}
+
+#wpmap-sidebar {
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+	h3 {
+		font: 900 15px/1.1em 'Lato', sans-serif;
+		margin: 0;
+		text-transform: uppercase;
+		a {
+			color: $brand-primary;
+			&:hover { color: $link-hover-color; }
+		}
+	}
+	.popup-header, .popup-body, .popup-footer {
+		padding: 10px;
+	}
+	.popup-district {
+		display: table-cell;
+		vertical-align: bottom;
+		&-inner {
+			@include filter(inherit);
+		}
+	}
+	.popup-address {
+		padding-bottom: 10px;
+	}
+	.popup-address, .popup-typology {
+		font: {
+			weight: 700;
+		}
+	}
+}

@@ -528,4 +528,49 @@ form input, form textarea {
   box-shadow: none !important;
 }
 
+/* ==========================================================================
+   WPMap Plugin
+   ========================================================================== */
+.close:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+#wpmap-sidebar {
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+#wpmap-sidebar h3 {
+  font: 900 15px/1.1em 'Lato', sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+}
+#wpmap-sidebar h3 a {
+  color: #2b3423;
+}
+#wpmap-sidebar h3 a:hover {
+  color: #000;
+}
+#wpmap-sidebar .popup-header, #wpmap-sidebar .popup-body, #wpmap-sidebar .popup-footer {
+  padding: 10px;
+}
+#wpmap-sidebar .popup-district {
+  display: table-cell;
+  vertical-align: bottom;
+}
+#wpmap-sidebar .popup-district-inner {
+  display: inline-block;
+  font: 400 14px 'Lato', sans-serif;
+  border: 1px solid;
+  border-color: inherit;
+  padding: 3px 5px;
+  text-transform: uppercase;
+}
+#wpmap-sidebar .popup-address {
+  padding-bottom: 10px;
+}
+#wpmap-sidebar .popup-address, #wpmap-sidebar .popup-typology {
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=style.css.map */
