@@ -96,14 +96,39 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'assets/js/plugins.min.js': [
-                        'assets/js/source/plugins.js',
-                        'assets/js/vendor/navigation.js',
-                        'assets/js/vendor/skip-link-focus-fix.js',
-                        // 'assets/js/vendor/yourplugin/yourplugin.js',
+                        //'assets/js/source/plugins.js',
+                        //'assets/js/vendor/navigation.js',
+                        //'assets/js/vendor/skip-link-focus-fix.js',
+                        //'assets/js/vendor/yourplugin/yourplugin.js',
+                        'assets/js/source/page-gardens.js',
                     ]
                 }
             },
-            main: {
+            pageGardens: {
+                options: {
+                    sourceMap: 'assets/js/page-gardens.js.map',
+                    sourceMappingURL: 'page-gardens.js.map',
+                    sourceMapPrefix: 2
+                },
+                files: {
+                    'assets/js/page-gardens.min.js': [
+                        'assets/js/source/page-gardens.js'
+                    ]
+                }
+            },
+            pluginWpmap: {
+                options: {
+                    sourceMap: 'assets/js/plugin-wpmap.js.map',
+                    sourceMappingURL: 'plugin-wpmap.js.map',
+                    sourceMapPrefix: 2
+                },
+                files: {
+                    'assets/js/plugin-wpmap.min.js': [
+                        'assets/js/source/plugin-wpmap.js'
+                    ]
+                }
+            },
+	    main: {
                 options: {
                     sourceMap: 'assets/js/main.js.map',
                     sourceMappingURL: 'main.js.map',
