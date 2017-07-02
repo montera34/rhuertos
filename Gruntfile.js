@@ -88,22 +88,22 @@ module.exports = function(grunt) {
 
         // uglify to concat, minify, and make source maps
         uglify: {
-            plugins: {
-                options: {
-                    sourceMap: 'assets/js/plugins.js.map',
-                    sourceMappingURL: 'plugins.js.map',
-                    sourceMapPrefix: 2
-                },
-                files: {
-                    'assets/js/plugins.min.js': [
-                        //'assets/js/source/plugins.js',
-                        //'assets/js/vendor/navigation.js',
-                        //'assets/js/vendor/skip-link-focus-fix.js',
-                        //'assets/js/vendor/yourplugin/yourplugin.js',
-                        'assets/js/source/page-gardens.js',
-                    ]
-                }
-            },
+//            plugins: {
+//                options: {
+//                    sourceMap: 'assets/js/plugins.js.map',
+//                    sourceMappingURL: 'plugins.js.map',
+//                    sourceMapPrefix: 2
+//                },
+//                files: {
+//                    'assets/js/plugins.min.js': [
+//                        //'assets/js/source/plugins.js',
+//                        //'assets/js/vendor/navigation.js',
+//                        //'assets/js/vendor/skip-link-focus-fix.js',
+//                        //'assets/js/vendor/yourplugin/yourplugin.js',
+//                        'assets/js/source/page-gardens.js',
+//                    ]
+//                }
+//            },
             pageGardens: {
                 options: {
                     sourceMap: 'assets/js/page-gardens.js.map',
