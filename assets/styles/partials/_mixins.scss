@@ -36,6 +36,10 @@
 	text-transform: uppercase;
 	text-decoration: $text-decoration;
 	&:before, &:after { content: '·'; }
+	margin:{
+		top: 14px;
+		bottom: 14px;
+	}
 }
 
 /* FILTERS */

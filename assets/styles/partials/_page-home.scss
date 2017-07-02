@@ -9,10 +9,8 @@ body.page-template-page-gardens {
 	h2 {
 		@include sec-tit(16px,underline);
 	}
-	.block {
-		margin-bottom: 50px;
-	}
 	.actividad,.new,.download {
+		margin-bottom: 18px;
 		h3 {
 			font: 900 15px/1.1em 'Lato', sans-serif;
 			margin: 10px 0 0 0;
@@ -27,7 +25,6 @@ body.page-template-page-gardens {
 		}
 	}
 	.garden {
-		margin-bottom: 30px;
 		&-heading {
 			display: table-row;
 		}
@@ -83,7 +80,13 @@ body.page-template-page-gardens {
 		}
 	}
 }
+body.home {
+	.garden { margin-bottom: 18px; }
+}
 body.page-template-page-gardens {
+	.garden {
+		margin-bottom: 30px;
+	}
 	.garden-filters {
 		margin-top: 18px;
 		margin-bottom: 18px;

@@ -165,13 +165,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 .site-header .barw .row {
-  padding: 20px 0;
+  padding: 16px 0;
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {
+  margin-top: 18px;
   background-color: #e2dbb5;
   color: #2b3423;
 }
@@ -208,6 +209,9 @@ h1, h2, h3, h4, h5, h6 {
 .site-header .bargl .navbar-collapse {
   text-transform: uppercase;
 }
+.site-header .navbar-fixed-top {
+  z-index: 2030;
+}
 
 .site-footer .navbar {
   margin-bottom: 10px;
@@ -220,10 +224,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    Posts and pages
    ========================================================================== */
-body.page .block {
-  margin-bottom: 50px;
-}
-
 .byline,
 .updated {
   display: none;
@@ -319,6 +319,8 @@ body.page-template-page-gardens h2 {
   font: 700 16px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: underline;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 body.home h2:before, body.home h2:after,
 body.page-template-page-blog h2:before,
@@ -329,11 +331,17 @@ body.page-template-page-gardens h2:before,
 body.page-template-page-gardens h2:after {
   content: '·';
 }
-body.home .block,
-body.page-template-page-blog .block,
-body.page-template-page-map .block,
-body.page-template-page-gardens .block {
-  margin-bottom: 50px;
+body.home .actividad, body.home .new, body.home .download,
+body.page-template-page-blog .actividad,
+body.page-template-page-blog .new,
+body.page-template-page-blog .download,
+body.page-template-page-map .actividad,
+body.page-template-page-map .new,
+body.page-template-page-map .download,
+body.page-template-page-gardens .actividad,
+body.page-template-page-gardens .new,
+body.page-template-page-gardens .download {
+  margin-bottom: 18px;
 }
 body.home .actividad h3, body.home .new h3, body.home .download h3,
 body.page-template-page-blog .actividad h3,
@@ -381,12 +389,6 @@ body.page-template-page-gardens .download-org,
 body.page-template-page-gardens .download-file {
   text-align: center;
   margin: 20px 0 0 0;
-}
-body.home .garden,
-body.page-template-page-blog .garden,
-body.page-template-page-map .garden,
-body.page-template-page-gardens .garden {
-  margin-bottom: 30px;
 }
 body.home .garden-heading,
 body.page-template-page-blog .garden-heading,
@@ -481,6 +483,13 @@ body.page-template-page-gardens .mapdown-caption {
   width: 100%;
 }
 
+body.home .garden {
+  margin-bottom: 18px;
+}
+
+body.page-template-page-gardens .garden {
+  margin-bottom: 30px;
+}
 body.page-template-page-gardens .garden-filters {
   margin-top: 18px;
   margin-bottom: 18px;
@@ -489,6 +498,8 @@ body.page-template-page-gardens .garden-filter-tit {
   font: 700 16px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
+  margin-top: 14px;
+  margin-bottom: 14px;
   color: #fff;
   background-color: #2b3423;
   display: inline-block;

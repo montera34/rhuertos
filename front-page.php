@@ -20,29 +20,48 @@ get_header(); ?>
 	// NEWS
 	////
 	$args = array(
-		'post_type' => 'actividad',
+		'post_type' => array('actividad','download','new'),
 		'posts_per_page' => '4',
-		'meta_query' => array(
+/*		'meta_query' => array(
 			array(
 				'key'     => '_act_date_end',
 				'value'   => date( "Y-m-d" ),
 				'compare' => '>',
 			),
-		)
+		)*/
 	);
 	$news = new WP_Query($args);
 	if ( $news->have_posts() ) :
 	?>
 
 		<section id="news" class="block container">
-			<header class="row"><h2 class="col-sm-12"><?php _e('Last news','_mbbasetheme') ?></h2></header>
+			<header class="row"><h2 class="col-sm-12"><?php _e('Last publications','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<?php while ( $news->have_posts() ) : $news->the_post();
-					get_template_part( 'content', 'actividad' );
+					get_template_part( 'content', get_post_type() );
 				endwhile; // end of the loop. ?>
 			</div>
 		</section><!-- #news -->
+	<?php endif;
 
+	// GARDENS
+	////
+	$args = array(
+		'post_type' => 'garden',
+		'posts_per_page' => '4',
+	);
+	$gardens = new WP_Query($args);
+	if ( $gardens->have_posts() ) :
+	?>
+
+		<section id="gardens" class="block container">
+			<header class="row"><h2 class="col-sm-12"><?php _e('Last published gardens','_mbbasetheme') ?></h2></header>
+			<div class="row">
+				<?php while ( $gardens->have_posts() ) : $gardens->the_post();
+					get_template_part( 'content', 'garden' );
+				endwhile; // end of the loop. ?>
+			</div>
+		</section><!-- #gardens -->
 	<?php endif;
 
 	// MAP
@@ -68,32 +87,7 @@ get_header(); ?>
 					wpmap_showmap($args); ?>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-12"><div class="mapdown"><img src="<?php echo MB_BLOGTHEME; ?>/assets/images/mapa.huertos.comunitarios.madrid-v.161118-part.png" alt="<?php _e('Download the map in PDF format','mbbasetheme'); ?>" /><div class="mapdown-caption"><a href="<?php echo MB_BLOGTHEME; ?>/assets/images/mapa.huertos.comunitarios.madrid-v.161118.pdf"><i class="fa fa-5x fa-arrow-down"></i> <i class="fa fa-5x fa-map"></i><br /><?php _e('Download the map in PDF format','mbbasetheme'); ?></a></div></div></div>
-			</div>
 		</section><!-- #map -->
-
-	<?php
-	// GARDENS
-	////
-	$args = array(
-		'post_type' => 'garden',
-		'posts_per_page' => '4',
-	);
-	$gardens = new WP_Query($args);
-	if ( $gardens->have_posts() ) :
-	?>
-
-		<section id="gardens" class="block container">
-			<header class="row"><h2 class="col-sm-12"><?php _e('Last published gardens','_mbbasetheme') ?></h2></header>
-			<div class="row">
-				<?php while ( $gardens->have_posts() ) : $gardens->the_post();
-					get_template_part( 'content', 'garden' );
-				endwhile; // end of the loop. ?>
-			</div>
-		</section><!-- #gardens -->
-
-	<?php endif;?>
 
 </main><!-- #main -->
 
