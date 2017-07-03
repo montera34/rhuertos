@@ -7,7 +7,7 @@ body.page-template-page-blog,
 body.page-template-page-map,
 body.page-template-page-gardens {
 	h2 {
-		@include sec-tit(16px,underline);
+		@include sec-tit(16px,underline,14px,14px);
 	}
 	.actividad,.new,.download {
 		margin-bottom: 18px;
@@ -90,18 +90,24 @@ body.page-template-page-gardens {
 		margin-bottom: 30px;
 	}
 	.garden-filters {
-		margin-top: 18px;
+		margin-top: 0px;
 		margin-bottom: 18px;
 	}
 	.garden-filter-tit {
-		@include sec-tit(16px,none);
+		@include sec-tit(16px,none,0,9px);
 		color: #fff;
 		background-color: $brand-primary;
+		border: 1px solid $brand-primary;
 		display: inline-block;
-		padding: 10px 25px;
-		margin-bottom: 9px;
+		padding: 4px 5px 3px;
 	}
 	.garden-filter {
+		display: inline;
+		padding-left: 14px;
+		li {
+			padding-left: 0;
+			padding-right: 9px;
+		}
 		&-district {
 			a { @include filter(#333); }
 		}

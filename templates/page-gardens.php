@@ -12,7 +12,7 @@ get_header(); ?>
 <main id="main" class="site-main" role="main">
 	<section id="gardens" class="block container">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<header class="row"><?php the_title( '<h1 class="col-sm-12 entry-title">', '</h1>' ); ?></header>
+			<header class="row"><?php the_title( '<h1 class="col-sm-12 entry-title hidden">', '</h1>' ); ?></header>
 		<?php endwhile; // end of this page loop
 
 		// GARDENS

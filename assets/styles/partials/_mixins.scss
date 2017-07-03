@@ -31,14 +31,14 @@
 }
 
 /* H2 */
-@mixin sec-tit($font-size,$text-decoration) {
+@mixin sec-tit($font-size,$text-decoration,$margin-top,$margin-bottom) {
 	font: 700 $font-size 'Museo', sans-serif;
 	text-transform: uppercase;
 	text-decoration: $text-decoration;
 	&:before, &:after { content: '·'; }
 	margin:{
-		top: 14px;
-		bottom: 14px;
+		top: $margin-top;
+		bottom: $margin-bottom;
 	}
 }
 

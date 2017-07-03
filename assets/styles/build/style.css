@@ -480,23 +480,31 @@ body.page-template-page-gardens .garden {
   margin-bottom: 30px;
 }
 body.page-template-page-gardens .garden-filters {
-  margin-top: 18px;
+  margin-top: 0px;
   margin-bottom: 18px;
 }
 body.page-template-page-gardens .garden-filter-tit {
   font: 700 16px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 0;
+  margin-bottom: 9px;
   color: #fff;
   background-color: #2b3423;
+  border: 1px solid #2b3423;
   display: inline-block;
-  padding: 10px 25px;
-  margin-bottom: 9px;
+  padding: 4px 5px 3px;
 }
 body.page-template-page-gardens .garden-filter-tit:before, body.page-template-page-gardens .garden-filter-tit:after {
   content: '·';
+}
+body.page-template-page-gardens .garden-filter {
+  display: inline;
+  padding-left: 14px;
+}
+body.page-template-page-gardens .garden-filter li {
+  padding-left: 0;
+  padding-right: 9px;
 }
 body.page-template-page-gardens .garden-filter-district a {
   display: inline-block;
