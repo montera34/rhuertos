@@ -8,26 +8,17 @@
 	$(window).load(function() {
 		resizeMapH('#map');
 	});
-//	// window resize event
-//	$(window).resize(function() {
-//		if(this.resizeTO) clearTimeout(this.resizeTO);
-//		this.resizeTO = setTimeout(function() {
-//			$(this).trigger('resizeEnd');
-//		}, 500);
-//	});
-//	$(window).bind("resizeEnd", function() {
-//		//hashNow = location.hash;
-//		el = document.getElementById($("a[href='"+hashNow+"']").get(0).getAttribute('data-menuanchor'));
-//		pnrScroll(el,hashNow,"resize");
-//
-//		if ( win.width() > 1280 ) {
-//			$("#fullpage").addClass("height-corrective");
-//		}
-//		if ( win.width() < 992 ) {
-//			pnrSetHeight(".section");
-//		}
-//
-//	});
+
+	// window resize event
+	$(window).resize(function() {
+		if(this.resizeTO) clearTimeout(this.resizeTO);
+		this.resizeTO = setTimeout(function() {
+			$(this).trigger('resizeEnd');
+		}, 500);
+	});
+	$(window).bind("resizeEnd", function() {
+		resizeMapH('#map');
+	});
 
 	function resizeMapH(mapId) {
 		var winH = Number($(window).height());
