@@ -18,6 +18,23 @@
 		z-index: 2030;
 	}
 }
+.post-type-archive-actividad,
+.single-actividad,
+.post-type-archive-download,
+.single-download,
+.post-type-archive-new,
+.single-new {
+	.menu-blog {
+		color: $active-color;
+		text-decoration: underline;
+	}
+}
+.single-garden {
+	.menu-garden {
+		color: $active-color;
+		text-decoration: underline;
+	}
+}
 .site-footer {
 	.navbar {
 		margin-bottom: 10px;

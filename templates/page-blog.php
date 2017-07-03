@@ -31,7 +31,7 @@ get_header(); ?>
 	?>
 
 		<section id="activities" class="block container">
-			<header class="row"><h2 class="col-sm-12"><?php _e('Activities','_mbbasetheme') ?></h2></header>
+			<header class="row"><h2 class="col-sm-12"><a href="/actividades"><?php _e('Activities','_mbbasetheme') ?></a></h2></header>
 			<div class="row">
 				<?php while ( $activities->have_posts() ) : $activities->the_post();
 					get_template_part( 'content', 'actividad' );
@@ -45,7 +45,7 @@ get_header(); ?>
 	// NEWS
 	////
 	$args = array(
-		'post_type' => 'post',
+		'post_type' => 'new',
 		'posts_per_page' => '4',
 	);
 	$news = new WP_Query($args);
@@ -53,10 +53,10 @@ get_header(); ?>
 	?>
 
 		<section id="news" class="block container">
-			<header class="row"><h2 class="col-sm-12"><?php _e('News','_mbbasetheme') ?></h2></header>
+			<header class="row"><h2 class="col-sm-12"><a href="/noticias"><?php _e('News','_mbbasetheme') ?></a></h2></header>
 			<div class="row">
 				<?php while ( $news->have_posts() ) : $news->the_post();
-					get_template_part( 'content', 'post' );
+					get_template_part( 'content', 'new' );
 				endwhile; // end of the loop. ?>
 			</div>
 		</section><!-- #news -->
@@ -74,7 +74,7 @@ get_header(); ?>
 	?>
 
 		<section id="downloads" class="block container">
-			<header class="row"><h2 class="col-sm-12"><?php _e('Downloads','_mbbasetheme') ?></h2></header>
+			<header class="row"><h2 class="col-sm-12"><a href="/descargas"><?php _e('Downloads','_mbbasetheme') ?></a></h2></header>
 			<div class="row">
 				<?php while ( $downloads->have_posts() ) : $downloads->the_post();
 					get_template_part( 'content', 'download' );

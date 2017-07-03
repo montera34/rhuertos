@@ -9,13 +9,17 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) :
+		$pt = get_post_type_object(get_post_type());
+		$a_class = $pt->name;
+		$a_tit = $pt->label;
+	?>
 
-			<header class="page-header">
-				<h1 class="page-title">
+		<section id="<?php echo $a_class ?>" class="block container">
+			<header class="row">
+				<h1 class="col-sm-12 page-title">
 					<?php
 						if ( is_category() ) :
 							single_cat_title();
@@ -62,6 +66,8 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
 							_e( 'Chats', '_mbbasetheme' );
 
+						elseif ( is_post_type_archive( array('actividad','download','new') ) ) :
+							echo $a_tit;
 						else :
 							_e( 'Archives', '_mbbasetheme' );
 
@@ -69,26 +75,28 @@ get_header(); ?>
 					?>
 				</h1>
 				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
+				// Show an optional term description.
+				$term_description = term_description();
+				if ( ! empty( $term_description ) ) :
+					printf( '<div class="taxonomy-description">%s</div>', $term_description );
+				endif;
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
+			<div class="row">
 				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+				$c = 0;
+				while ( have_posts() ) : the_post();
 
-			<?php endwhile; ?>
+					get_template_part( 'content', get_post_type() );
+					$c++;
+					if ( $c == 4 ) {
+						$c == 0;
+						echo '<div class="clearfix"></div>';
+					}
+
+				endwhile; ?>
+			</div>
 
 			<?php _mbbasetheme_paging_nav(); ?>
 
@@ -98,8 +106,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
 	</section><!-- #primary -->
+</main><!-- #main -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

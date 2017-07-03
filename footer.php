@@ -58,7 +58,7 @@
 		<div id="credits" class="barw">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-3 barw-brand"><?php echo __('Madrid City Council','_mbbasetheme') ." ". date( "Y" ); ?></div>
+					<div class="col-sm-3 barw-brand"><strong><?php echo __('Madrid City Council','_mbbasetheme') ." ". date( "Y" ); ?></strong></div>
 					<div class="col-sm-9">
 						<nav id="credits-menu" class="navbar navbar-right navbar-inverse" role="navigation">
 						<div class="navbar-header">

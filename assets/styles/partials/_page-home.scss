@@ -9,6 +9,15 @@ body.page-template-page-gardens {
 	h2 {
 		@include sec-tit(16px,underline,14px,14px);
 	}
+}
+body.post-type-archive {
+	h1 {
+		@include sec-tit(16px,underline,0px,14px);
+	}
+}
+body.home,
+body.page-template-page-blog,
+body.post-type-archive {
 	.actividad,.new,.download {
 		margin-bottom: 18px;
 		h3 {
@@ -24,6 +33,9 @@ body.page-template-page-gardens {
 		
 		}
 	}
+}
+body.home,
+body.page-template-page-gardens {
 	.garden {
 		&-heading {
 			display: table-row;

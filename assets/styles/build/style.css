@@ -213,6 +213,21 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2030;
 }
 
+.post-type-archive-actividad .menu-blog,
+.single-actividad .menu-blog,
+.post-type-archive-download .menu-blog,
+.single-download .menu-blog,
+.post-type-archive-new .menu-blog,
+.single-new .menu-blog {
+  color: #000;
+  text-decoration: underline;
+}
+
+.single-garden .menu-garden {
+  color: #000;
+  text-decoration: underline;
+}
+
 .site-footer .navbar {
   margin-bottom: 10px;
   font-weight: 700;
@@ -331,28 +346,34 @@ body.page-template-page-gardens h2:before,
 body.page-template-page-gardens h2:after {
   content: '·';
 }
+
+body.post-type-archive h1 {
+  font: 700 16px "Museo", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+body.post-type-archive h1:before, body.post-type-archive h1:after {
+  content: '·';
+}
+
 body.home .actividad, body.home .new, body.home .download,
 body.page-template-page-blog .actividad,
 body.page-template-page-blog .new,
 body.page-template-page-blog .download,
-body.page-template-page-map .actividad,
-body.page-template-page-map .new,
-body.page-template-page-map .download,
-body.page-template-page-gardens .actividad,
-body.page-template-page-gardens .new,
-body.page-template-page-gardens .download {
+body.post-type-archive .actividad,
+body.post-type-archive .new,
+body.post-type-archive .download {
   margin-bottom: 18px;
 }
 body.home .actividad h3, body.home .new h3, body.home .download h3,
 body.page-template-page-blog .actividad h3,
 body.page-template-page-blog .new h3,
 body.page-template-page-blog .download h3,
-body.page-template-page-map .actividad h3,
-body.page-template-page-map .new h3,
-body.page-template-page-map .download h3,
-body.page-template-page-gardens .actividad h3,
-body.page-template-page-gardens .new h3,
-body.page-template-page-gardens .download h3 {
+body.post-type-archive .actividad h3,
+body.post-type-archive .new h3,
+body.post-type-archive .download h3 {
   font: 900 15px/1.1em 'Lato', sans-serif;
   margin: 10px 0 0 0;
 }
@@ -360,12 +381,9 @@ body.home .actividad-date, body.home .new-date, body.home .download-date,
 body.page-template-page-blog .actividad-date,
 body.page-template-page-blog .new-date,
 body.page-template-page-blog .download-date,
-body.page-template-page-map .actividad-date,
-body.page-template-page-map .new-date,
-body.page-template-page-map .download-date,
-body.page-template-page-gardens .actividad-date,
-body.page-template-page-gardens .new-date,
-body.page-template-page-gardens .download-date {
+body.post-type-archive .actividad-date,
+body.post-type-archive .new-date,
+body.post-type-archive .download-date {
   font: 400 14px 'Lato', sans-serif;
 }
 body.home .actividad-org, body.home .actividad-file, body.home .new-org, body.home .new-file, body.home .download-org, body.home .download-file,
@@ -375,38 +393,27 @@ body.page-template-page-blog .new-org,
 body.page-template-page-blog .new-file,
 body.page-template-page-blog .download-org,
 body.page-template-page-blog .download-file,
-body.page-template-page-map .actividad-org,
-body.page-template-page-map .actividad-file,
-body.page-template-page-map .new-org,
-body.page-template-page-map .new-file,
-body.page-template-page-map .download-org,
-body.page-template-page-map .download-file,
-body.page-template-page-gardens .actividad-org,
-body.page-template-page-gardens .actividad-file,
-body.page-template-page-gardens .new-org,
-body.page-template-page-gardens .new-file,
-body.page-template-page-gardens .download-org,
-body.page-template-page-gardens .download-file {
+body.post-type-archive .actividad-org,
+body.post-type-archive .actividad-file,
+body.post-type-archive .new-org,
+body.post-type-archive .new-file,
+body.post-type-archive .download-org,
+body.post-type-archive .download-file {
   text-align: center;
   margin: 20px 0 0 0;
 }
+
 body.home .garden-heading,
-body.page-template-page-blog .garden-heading,
-body.page-template-page-map .garden-heading,
 body.page-template-page-gardens .garden-heading {
   display: table-row;
 }
 body.home .garden h3,
-body.page-template-page-blog .garden h3,
-body.page-template-page-map .garden h3,
 body.page-template-page-gardens .garden h3 {
   font: 900 15px/1.1em 'Lato', sans-serif;
   margin: 0;
   text-transform: uppercase;
 }
 body.home .garden-text,
-body.page-template-page-blog .garden-text,
-body.page-template-page-map .garden-text,
 body.page-template-page-gardens .garden-text {
   padding: 7px 10px;
   display: table;
@@ -414,21 +421,15 @@ body.page-template-page-gardens .garden-text {
   height: 100px;
 }
 body.home .garden-address,
-body.page-template-page-blog .garden-address,
-body.page-template-page-map .garden-address,
 body.page-template-page-gardens .garden-address {
   font: 400 14px 'Lato', sans-serif;
 }
 body.home .garden-district,
-body.page-template-page-blog .garden-district,
-body.page-template-page-map .garden-district,
 body.page-template-page-gardens .garden-district {
   display: table-cell;
   vertical-align: bottom;
 }
 body.home .garden-district-inner,
-body.page-template-page-blog .garden-district-inner,
-body.page-template-page-map .garden-district-inner,
 body.page-template-page-gardens .garden-district-inner {
   display: inline-block;
   font: 400 14px 'Lato', sans-serif;
@@ -438,14 +439,10 @@ body.page-template-page-gardens .garden-district-inner {
   text-transform: uppercase;
 }
 body.home .garden-img,
-body.page-template-page-blog .garden-img,
-body.page-template-page-map .garden-img,
 body.page-template-page-gardens .garden-img {
   position: relative;
 }
 body.home .garden-img figcaption,
-body.page-template-page-blog .garden-img figcaption,
-body.page-template-page-map .garden-img figcaption,
 body.page-template-page-gardens .garden-img figcaption {
   position: absolute;
   bottom: 20px;
