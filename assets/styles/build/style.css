@@ -452,33 +452,22 @@ body.page-template-page-gardens .garden-img figcaption {
   width: 100%;
   text-align: center;
 }
-body.home .mapdown,
-body.page-template-page-blog .mapdown,
-body.page-template-page-map .mapdown,
-body.page-template-page-gardens .mapdown {
-  margin-top: 18px;
+
+body.page-template-page-map .mapdown {
+  margin-top: 9px;
   position: relative;
 }
-body.home .mapdown a,
-body.page-template-page-blog .mapdown a,
-body.page-template-page-map .mapdown a,
-body.page-template-page-gardens .mapdown a {
+body.page-template-page-map .mapdown a {
   display: block;
   padding: 25px 0;
   background-color: rgba(255, 255, 255, 0.7);
 }
-body.home .mapdown a:hover,
-body.page-template-page-blog .mapdown a:hover,
-body.page-template-page-map .mapdown a:hover,
-body.page-template-page-gardens .mapdown a:hover {
+body.page-template-page-map .mapdown a:hover {
   background-color: white;
 }
-body.home .mapdown-caption,
-body.page-template-page-blog .mapdown-caption,
-body.page-template-page-map .mapdown-caption,
-body.page-template-page-gardens .mapdown-caption {
+body.page-template-page-map .mapdown-caption {
   position: absolute;
-  bottom: 30px;
+  top: 240px;
   text-align: center;
   width: 100%;
 }

@@ -61,8 +61,10 @@ body.page-template-page-gardens {
 		&-icon {
 		}	
 	}
+}
+body.page-template-page-map {
 	.mapdown {
-		margin-top: 18px;
+		margin-top: 9px;
 		position: relative;
 		a {
 			display: block;
@@ -74,7 +76,7 @@ body.page-template-page-gardens {
 		}
 		&-caption {
 			position: absolute;
-			bottom: 30px;
+			top: 240px;
 			text-align: center;
 			width: 100%;
 		}

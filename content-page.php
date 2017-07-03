@@ -11,6 +11,8 @@ if ( has_post_thumbnail() ) {
 } else {
 	$loop_image = "";
 }
+
+$loop_classes = ( is_page_template('templates/page-map.php') ) ? 'col-sm-12' : 'col-sm-8' ;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('block container'); ?>>
@@ -18,7 +20,7 @@ if ( has_post_thumbnail() ) {
 		<?php the_title( '<h1 class="col-sm-12 entry-title">', '</h1>' ); ?>
 	</header>
 	<div class="row entry-content">
-		<div class="col-sm-8">
+	<div class="<?php echo $loop_classes ?>">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

@@ -26,6 +26,12 @@ function _mbbasetheme_setup() {
 	mb_theme_vars();
 
 	/*
+	 * Image sizes
+	 */
+	mb_image_sizes();
+	add_filter( 'image_size_names_choose', 'mb_image_sizes_names' );
+
+	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on _mbbasetheme, use a find and replace

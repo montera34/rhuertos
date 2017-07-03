@@ -23,6 +23,36 @@ function mb_theme_vars() {
 }
 
 /**
+ * Set up image sizes and media options
+ */
+function mb_image_sizes() {
+
+	// add extra sizes
+	add_image_size( 'icon', 0, 36, false );
+	add_image_size( 'mini', 263, 0, false );
+	add_image_size( 'small', 446, 0, false );
+	add_image_size( 'extralarge', 1140, 0, false );
+
+	/* set up image sizes*/
+	update_option('post-thumbnail_size_w', 1140);
+	update_option('thumbnail_size_w', 360);
+	update_option('thumbnail_size_h', 0);
+	update_option('medium_size_w', 555);
+	update_option('medium_size_h', 0);
+	update_option('large_size_w', 750);
+	update_option('large_size_h', 0);
+}
+
+function mb_image_sizes_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'icon' => __('Icon 36px','_mbbasetheme'),
+		'mini' => __('Mini 263px width','_mbbasetheme'),
+		'larger' => __('Small 446px width','_mbbasetheme'),
+		'extralarge' => __('Extra large 1140px width','_mbbasetheme'),
+	) );
+}
+
+/**
  * Register Widget Areas
  */
 function mb_widgets_init() {
@@ -133,7 +163,7 @@ function mb_scripts() {
 		wp_enqueue_script( 'isotope-js', get_template_directory_uri() . '/assets/isotope/isotope.pkgd.min.js', array('jquery'), '3.0.4', true );
 		wp_enqueue_script( 'page-gardens-js', get_template_directory_uri() . '/assets/js/page-gardens.min.js', array('isotope-js'), NULL, true );
 	} elseif ( is_page_template('templates/page-map.php') ) {
-		wp_enqueue_script( 'customplugins', get_template_directory_uri() . '/assets/js/plugin-wpmap.min.js', array('wpmap-js'), NULL, true );
+		wp_enqueue_script( 'plugin-wpmap-additional', get_template_directory_uri() . '/assets/js/plugin-wpmap.min.js', array('wpmap-js'), NULL, true );
 	}
 }
 /**
