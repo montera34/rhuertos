@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-06-28 10:10+0200\n"
-"PO-Revision-Date: 2017-06-28 10:10+0200\n"
+"POT-Creation-Date: 2017-07-02 17:25+0200\n"
+"PO-Revision-Date: 2017-07-02 17:25+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -104,7 +104,7 @@ msgstr ""
 
 #: comments.php:35 comments.php:52
 msgid "Comment navigation"
-msgstr ""
+msgstr "Paginación de comentarios"
 
 #: comments.php:36 comments.php:53
 msgid "&larr; Older Comments"
@@ -132,7 +132,7 @@ msgstr "Todo"
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nada encontrado"
 
 #: content-none.php:19
 #, php-format
@@ -154,7 +154,7 @@ msgstr ""
 
 #: content-page.php:25 content-single.php:20 content.php:22
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: content-page.php:33 content-search.php:53 content-single.php:58
 #: content.php:55
@@ -241,20 +241,16 @@ msgid "Madrid City Council"
 msgstr "Ayuntamiento de Madrid"
 
 #: front-page.php:38
-msgid "Last news"
-msgstr "Últimas noticias"
+msgid "Last publications"
+msgstr "Últimas publicaciones"
 
-#: front-page.php:52
-msgid "Map of community gardens in Madrid"
-msgstr "Mapa de los huertos comunitarios de Madrid"
-
-#: front-page.php:72 templates/page-map.php:35
-msgid "Download the map in PDF format"
-msgstr "Descargar el mapa en formato PDF"
-
-#: front-page.php:88
+#: front-page.php:58
 msgid "Last published gardens"
 msgstr "Últimos huertos incorporados"
+
+#: front-page.php:71
+msgid "Map of community gardens in Madrid"
+msgstr "Mapa de los huertos comunitarios de Madrid"
 
 #: header.php:45
 msgid "Search gardens"
@@ -392,15 +388,15 @@ msgstr ""
 
 #: lib/class-tgm-plugin-activation.php:2438
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: lib/class-tgm-plugin-activation.php:2442
 msgid "Version"
-msgstr ""
+msgstr "Versión"
 
 #: lib/class-tgm-plugin-activation.php:2443
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: lib/class-tgm-plugin-activation.php:2603
 msgid "Install"
@@ -408,7 +404,7 @@ msgstr ""
 
 #: lib/class-tgm-plugin-activation.php:2609
 msgid "Update"
-msgstr ""
+msgstr "Actualizar"
 
 #: lib/class-tgm-plugin-activation.php:2612
 msgid "Activate"
@@ -503,7 +499,7 @@ msgstr "Artículos siguientes <span class=\"meta-nav\">&rarr;</span>"
 
 #: lib/inc/template-tags.php:52
 msgid "Post navigation"
-msgstr ""
+msgstr "Navegación de artículos"
 
 #: lib/inc/template-tags.php:151
 msgid "Search"
@@ -557,3 +553,10 @@ msgstr "Noticias"
 #: templates/page-blog.php:77
 msgid "Downloads"
 msgstr "Descargas"
+
+#: templates/page-map.php:35
+msgid "Download the map in PDF format"
+msgstr "Descargar el mapa en formato PDF"
+
+#~ msgid "Last news"
+#~ msgstr "Últimas noticias"
