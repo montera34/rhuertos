@@ -244,3 +244,18 @@ function _mbbasetheme_get_carousel($post_id) {
 
 }
 endif;
+
+if ( ! function_exists( '_mbbasetheme_get_updated_on_date' ) ) :
+/**
+ * Outputs the last modification data for a content
+ *
+ * @param	string $post_id Required. post ID
+ *
+ * @return	A HTML5 time code
+ */
+function _mbbasetheme_get_updated_on_date($post_id) {
+	$updated_on = get_the_modified_date('Y-m-d');
+	$updated_on_human = get_the_modified_date();
+	return '<time datetime="'.$updated_on.'" itemprop="dateModified">'.sprintf(__('Content updated on %s','_mbbasetheme'),$updated_on_human).'</time>';
+}
+endif;

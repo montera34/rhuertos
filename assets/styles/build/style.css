@@ -79,15 +79,6 @@ img {
 /* ==========================================================================
    Typography
    ========================================================================== */
-h1.entry-title, .hentry h2, .sec-title h2 {
-  font-size: 16px;
-  text-transform: uppercase;
-  text-decoration: underline;
-}
-h1.entry-title:before, h1.entry-title:after, .hentry h2:before, .hentry h2:after, .sec-title h2:before, .sec-title h2:after {
-  content: '·';
-}
-
 .hentry h3 {
   font-size: 13px;
   text-transform: uppercase;
@@ -237,72 +228,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Posts and pages
+   Single posts
    ========================================================================== */
-.byline,
-.updated {
-  display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-  display: inline;
-}
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-.wp-caption {
-  border: 1px solid #ccc;
-  margin-bottom: 1.5em;
-  max-width: 100%;
-}
-
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin: 1.2% auto 0;
-  max-width: 98%;
-}
-
-.wp-caption-text {
-  text-align: center;
-}
-
-.wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
-}
-
-.site-main .gallery {
-  margin-bottom: 1.5em;
-}
-
-.site-main .gallery a img {
-  border: none;
-  height: auto;
-  max-width: 90%;
-}
-
-.site-main .gallery dd,
-.site-main .gallery figcaption {
-  margin: 0;
-}
-
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
 object {
   max-width: 100%;
+}
+
+.single-garden .entry-title {
+  font-family: 'Lato',sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+.single-garden .entry-subtitle {
+  font: 700 14px "Museo", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+.single-garden .entry-subtitle:before, .single-garden .entry-subtitle:after {
+  content: '·';
+}
+.single-garden dl.entry-meta dt {
+  font-weight: normal;
+  text-transform: uppercase;
+  float: left;
+  padding-right: 10px;
+}
+.single-garden dl.entry-meta .garden-district {
+  border: 1px solid;
+  padding: 0 3px;
+}
+.single-garden dl.entry-meta p {
+  margin: 0;
+}
+.single-garden .entry-content {
+  margin-bottom: 9px;
+}
+.single-garden .equipment {
+  text-align: center;
+  vertical-align: top;
+  width: 120px;
+  margin-bottom: 9px;
+}
+.single-garden .equipment-label {
+  margin-top: 5px;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+.single-garden .entry-footer {
+  margin-top: 20px;
 }
 
 /* ==========================================================================

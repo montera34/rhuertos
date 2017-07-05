@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-07-02 17:25+0200\n"
-"PO-Revision-Date: 2017-07-02 17:25+0200\n"
+"POT-Creation-Date: 2017-07-05 01:44+0200\n"
+"PO-Revision-Date: 2017-07-05 01:44+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -42,63 +42,63 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: archive.php:27
+#: archive.php:31
 #, php-format
 msgid "Author: %s"
 msgstr ""
 
-#: archive.php:30
+#: archive.php:34
 #, php-format
 msgid "Day: %s"
 msgstr ""
 
-#: archive.php:33
+#: archive.php:37
 #, php-format
 msgid "Month: %s"
 msgstr ""
 
-#: archive.php:36
+#: archive.php:40
 #, php-format
 msgid "Year: %s"
 msgstr ""
 
-#: archive.php:39
+#: archive.php:43
 msgid "Asides"
 msgstr ""
 
-#: archive.php:42
+#: archive.php:46
 msgid "Galleries"
 msgstr ""
 
-#: archive.php:45
+#: archive.php:49
 msgid "Images"
 msgstr ""
 
-#: archive.php:48
+#: archive.php:52
 msgid "Videos"
 msgstr ""
 
-#: archive.php:51
+#: archive.php:55
 msgid "Quotes"
 msgstr ""
 
-#: archive.php:54
+#: archive.php:58
 msgid "Links"
 msgstr ""
 
-#: archive.php:57
+#: archive.php:61
 msgid "Statuses"
 msgstr ""
 
-#: archive.php:60
+#: archive.php:64
 msgid "Audios"
 msgstr ""
 
-#: archive.php:63
+#: archive.php:67
 msgid "Chats"
 msgstr ""
 
-#: archive.php:66
+#: archive.php:72
 msgid "Archives"
 msgstr ""
 
@@ -152,12 +152,12 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:25 content-single.php:20 content.php:22
+#: content-page.php:27 content-single.php:20 content.php:22
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: content-page.php:33 content-search.php:53 content-single.php:58
-#: content.php:55
+#: content-page.php:35 content-search.php:53 content-single-garden.php:122
+#: content-single.php:58 content.php:55
 msgid "Edit"
 msgstr "Editar"
 
@@ -188,6 +188,50 @@ msgstr "1 comentario"
 #: content-search.php:50 content.php:52
 msgid "% Comments"
 msgstr "% comentarios"
+
+#: content-single-garden.php:82
+msgid "Address"
+msgstr "Dirección"
+
+#: content-single-garden.php:83
+msgid "Email"
+msgstr "Email de contacto"
+
+#: content-single-garden.php:84
+msgid "Website"
+msgstr "Sitio web"
+
+#: content-single-garden.php:85
+msgid "Begin data"
+msgstr "Fecha de inicio"
+
+#: content-single-garden.php:93
+msgid "Area"
+msgstr "Área"
+
+#: content-single-garden.php:94
+msgid "Open time"
+msgstr "Días y horas de apertura"
+
+#: content-single-garden.php:95
+msgid "Participants"
+msgstr "Número de participantes"
+
+#: content-single-garden.php:96
+msgid "People in kernel group"
+msgstr "Número de integrantes del grupo motor"
+
+#: content-single-garden.php:97
+msgid "Collaborators"
+msgstr "Entidades que participan y colaboran"
+
+#: content-single-garden.php:99
+msgid "Equipment"
+msgstr "Equipamiento"
+
+#: content-single-garden.php:101
+msgid "Location"
+msgstr "Localización"
 
 #: content-single.php:37
 #, php-format
@@ -345,7 +389,7 @@ msgstr ""
 
 #: lib/class-tgm-plugin-activation.php:2215
 msgid "Active"
-msgstr ""
+msgstr "Activo"
 
 #: lib/class-tgm-plugin-activation.php:2221
 msgid "Required Update not Available"
@@ -517,23 +561,44 @@ msgstr "Previo"
 msgid "Next"
 msgstr "Siguiente"
 
-#: lib/init.php:47
+#: lib/inc/template-tags.php:259
+#, php-format
+msgid "Content updated on %s"
+msgstr ""
+
+#: lib/init.php:53
 msgid "Header Menu"
 msgstr "Menú de cabecera"
 
-#: lib/init.php:48
+#: lib/init.php:54
 msgid "Footer Menu"
 msgstr "Menú del pie de página"
 
-#: lib/init.php:49
+#: lib/init.php:55
 msgid "Credits Menu"
 msgstr "Menú de la barra de créditos"
 
-#: lib/theme-functions.php:31
+#: lib/theme-functions.php:48
+msgid "Icon 36px"
+msgstr "Icono 36px"
+
+#: lib/theme-functions.php:49
+msgid "Mini 263px width"
+msgstr "Mini 263px de ancho"
+
+#: lib/theme-functions.php:50
+msgid "Small 446px width"
+msgstr "Pequeña 446px de ancho"
+
+#: lib/theme-functions.php:51
+msgid "Extra large 1140px width"
+msgstr "Extra grande 1140px de ancho"
+
+#: lib/theme-functions.php:61
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: lib/theme-functions.php:41
+#: lib/theme-functions.php:71
 msgid "Footer Widget Area"
 msgstr "Área de widgets del pie de página"
 
@@ -554,9 +619,8 @@ msgstr "Noticias"
 msgid "Downloads"
 msgstr "Descargas"
 
-#: templates/page-map.php:35
-msgid "Download the map in PDF format"
-msgstr "Descargar el mapa en formato PDF"
+#~ msgid "Download the map in PDF format"
+#~ msgstr "Descargar el mapa en formato PDF"
 
 #~ msgid "Last news"
 #~ msgstr "Últimas noticias"

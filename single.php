@@ -7,26 +7,31 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<?php
+	$pt = get_post_type();
+	if ( $pt == 'garden' ) {
+		// SLIDESHOW
+		////
+		get_template_part( 'content', 'carousel' );
+	}
 
-			<?php get_template_part( 'content', 'single' ); ?>
+	while ( have_posts() ) : the_post(); ?>
 
-			<?php _mbbasetheme_post_nav(); ?>
+		<?php get_template_part( 'content-single', $pt ); ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+		<?php //_mbbasetheme_post_nav(); ?>
 
-		<?php endwhile; // end of the loop. ?>
+		<?php
+		// If comments are open or we have at least one comment, load up the comment template
+		if ( comments_open() || '0' != get_comments_number() ) :
+			comments_template();
+		endif;
+		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<?php endwhile; // end of the loop. ?>
 
-<?php get_sidebar(); ?>
+</main><!-- #main -->
+
 <?php get_footer(); ?>

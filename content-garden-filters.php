@@ -6,7 +6,7 @@
 			'cols' => '6'
 		),
 		'district' => array(
-			'name' => __('Districts','pparticipa'),
+			'name' => __('Districts','_mbbasetheme'),
 			'cols' => '6'
 		)
 	);
@@ -16,7 +16,7 @@
 		);
 		$termes = get_terms($args);
 		if ( !is_wp_error($termes) ) {
-			$terms_out = '<div class="col-md-'.$d['cols'].'"><div class="garden-filter-tit">'.$d['name'].'</div><ul class="garden-filter garden-filter-'.$f.' list-inline"><li><a data-filter="*" href="#">'.__('All','pparticipa').'</a></li>';
+			$terms_out = '<div class="col-md-'.$d['cols'].'"><div class="garden-filter-tit">'.$d['name'].'</div><ul class="garden-filter garden-filter-'.$f.' list-inline"><li><a data-filter="*" href="#">'.__('All','_mbbasetheme').'</a></li>';
 			foreach ( $termes as $t ) {
 				if ( $f == 'typology') {
 					$t_color = get_term_meta($t->term_id,"_typology_color",true);

@@ -49,11 +49,6 @@ img {
    Typography
    ========================================================================== */
 
-h1.entry-title, .hentry h2, .sec-title h2 {
-	font-size: 16px; text-transform: uppercase; text-decoration: underline;
-	&:before, &:after { content: '·'; }
-
-}
 .hentry h3 {
 	font-size: $font-base-size; text-transform: uppercase; text-decoration: underline;
 }

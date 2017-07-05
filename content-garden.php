@@ -14,7 +14,8 @@ $fields = array(
 	'district' => get_the_terms($post->ID,'district'),
 //	'desc' => get_the_excerpt(),
 	'typo' => get_the_terms($post->ID,'typology'),
-	'icon' => get_post_meta($post->ID,'_garden_icon',true)
+	'icon' => get_post_meta($post->ID,'_garden_icon',true),
+	'equipment' => get_the_terms($post->ID,'equipment')
 );
 foreach ( $fields as $k => $f ) {
 	switch ($k) {
@@ -27,6 +28,13 @@ foreach ( $fields as $k => $f ) {
 				$loop_bgcolor = get_term_meta( $t->term_id,'_typology_bgcolor',true );
 				$loop_bgcolor = ( $loop_bgcolor == '' ) ? '#fff': $loop_bgcolor;
 				$loop_style = ' style="background-color: '.$loop_bgcolor.'; color: '.$loop_color.';"';
+			}
+			break;
+		case 'equipment' :
+			if ( $f === false ) break;
+			foreach ( $f as $t ) {
+				$eq_icon = get_term_meta( $t->term_id,'_equipment_icon',true );
+				//echo $eq_icon['guid'];
 			}
 			break;
 		case 'icon' :
