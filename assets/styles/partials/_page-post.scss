@@ -9,6 +9,20 @@ object {
 	max-width: 100%;
 }
 
+.aligncenter {
+	display: block;
+	margin-right: auto;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignright {
+	display: block;
+	margin-left: auto;
+}
+
 .single-garden {
 	.entry-title {
 		font: {

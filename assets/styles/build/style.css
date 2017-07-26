@@ -237,6 +237,22 @@ object {
   max-width: 100%;
 }
 
+.aligncenter {
+  display: block;
+  margin-right: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignright {
+  display: block;
+  margin-left: auto;
+}
+
 .single-garden .entry-title {
   font-family: 'Lato',sans-serif;
   font-weight: 700;
@@ -308,22 +324,44 @@ object {
    Home Page Template
    ========================================================================== */
 body.home h2,
-body.page-template-page-blog h2,
+body.page-template-default h2,
 body.page-template-page-map h2,
 body.page-template-page-gardens h2 {
-  font: 700 16px "Museo", sans-serif;
+  font: 700 14px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: underline;
   margin-top: 14px;
   margin-bottom: 14px;
 }
 body.home h2:before, body.home h2:after,
-body.page-template-page-blog h2:before,
-body.page-template-page-blog h2:after,
+body.page-template-default h2:before,
+body.page-template-default h2:after,
 body.page-template-page-map h2:before,
 body.page-template-page-map h2:after,
 body.page-template-page-gardens h2:before,
 body.page-template-page-gardens h2:after {
+  content: '·';
+}
+
+body.page-template-page-blog h2 {
+  font: 700 16px "Museo", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+body.page-template-page-blog h2:before, body.page-template-page-blog h2:after {
+  content: '·';
+}
+
+body.page-template-default h1 {
+  font: 700 16px "Museo", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+body.page-template-default h1:before, body.page-template-default h1:after {
   content: '·';
 }
 
@@ -498,6 +536,42 @@ body.page-template-page-gardens .garden-filter-typology a {
   border-color: transparent;
   padding: 3px 5px;
   text-transform: uppercase;
+}
+
+body.page-template-page-faqs .subpage {
+  padding-top: 113px;
+}
+body.page-template-page-faqs h1.parent-tit {
+  font: 700 16px "Museo", sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+body.page-template-page-faqs h1.parent-tit:before, body.page-template-page-faqs h1.parent-tit:after {
+  content: '·';
+}
+body.page-template-page-faqs h2.child-tit {
+  font: 700 14px "Museo", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+body.page-template-page-faqs h2.child-tit:before, body.page-template-page-faqs h2.child-tit:after {
+  content: '·';
+}
+body.page-template-page-faqs #faqs-nav .scroll-smooth {
+  font-family: 'Museo';
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+body.page-template-page-faqs #faqs-nav .scroll-smooth li {
+  margin-bottom: 5px;
+}
+body.page-template-page-faqs #faqs-nav .scroll-smooth .active, body.page-template-page-faqs #faqs-nav .scroll-smooth a:hover {
+  text-decoration: underline;
 }
 
 /* ==========================================================================

@@ -214,7 +214,7 @@ function _mbbasetheme_get_carousel($post_id) {
 		$slide_show_tit = get_post_meta( $s['ID'],'_slide_show_tit',true);
 		$slide_tit = ( $slide_show_tit == 1 ) ? '<h3>'.$s['post_title'].'</h3>' : '';
 		$slide_caption_bg = get_post_meta( $s['ID'],'_slide_caption_bg',true);
-		$slide_caption_class = ( $slide_caption_bg == 1 ) ? ' carousel-caption-bg' : '';
+		$slide_caption_class = ( $slide_caption_bg == 1 ) ? '' : ' carousel-caption-bg';
 		if ( has_post_thumbnail($s['ID']) ) {
 			//$slide_img = get_the_post_thumbnail($s['ID'],'full',array('class' => 'img-responsive'));
 			$slide_img = '';

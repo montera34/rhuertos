@@ -104,7 +104,19 @@ module.exports = function(grunt) {
 //                    ]
 //                }
 //            },
-            pageGardens: {
+             pageFaqs: {
+                options: {
+                    sourceMap: 'assets/js/page-faqs.js.map',
+                    sourceMappingURL: 'page-faqs.js.map',
+                    sourceMapPrefix: 2
+                },
+                files: {
+                    'assets/js/page-faqs.min.js': [
+                        'assets/js/source/page-faqs.js'
+                    ]
+                }
+            },
+           pageGardens: {
                 options: {
                     sourceMap: 'assets/js/page-gardens.js.map',
                     sourceMappingURL: 'page-gardens.js.map',

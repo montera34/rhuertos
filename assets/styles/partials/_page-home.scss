@@ -3,12 +3,23 @@
    ========================================================================== */
 
 body.home,
-body.page-template-page-blog,
+body.page-template-default,
 body.page-template-page-map,
 body.page-template-page-gardens {
 	h2 {
+		@include sec-tit(14px,underline,14px,14px);
+	}
+}
+body.page-template-page-blog {
+	h2 {
+		@include sec-tit(16px,underline,0,14px);
+	}
+}
+body.page-template-default {
+	h1 {
 		@include sec-tit(16px,underline,14px,14px);
 	}
+
 }
 body.post-type-archive {
 	h1 {
@@ -125,6 +136,27 @@ body.page-template-page-gardens {
 		}
 		&-typology {
 			a { @include filter(transparent); }
+		}
+	}
+}
+body.page-template-page-faqs {
+	.subpage { padding-top: 113px; }
+	h1.parent-tit {
+		@include sec-tit(16px,underline,0,14px);
+	}
+	h2.child-tit {
+		@include sec-tit(14px,none,0,14px);
+	}
+	#faqs-nav {
+		.scroll-smooth {
+			font: {
+				family: 'Museo';
+				size: 12px;
+				weight: 300;
+			}
+			text-transform: uppercase;
+			li { margin-bottom: 5px; }
+			.active,a:hover { text-decoration: underline; }
 		}
 	}
 }
