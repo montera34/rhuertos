@@ -23,7 +23,8 @@ object {
 	margin-left: auto;
 }
 
-.single-garden {
+.single-garden,
+.single-new {
 	.entry-title {
 		font: {
 			family: 'Lato',sans-serif;
@@ -36,6 +37,15 @@ object {
 	.entry-subtitle {
 		@include sec-tit(14px,underline,0,14px);
 	}
+	.entry-content {
+		margin-bottom: 9px;
+	}
+	.entry-footer {
+		margin-top: 20px;
+	}
+
+}
+.single-garden {
 	dl.entry-meta {
 		dt {
 			font-weight: normal;
@@ -50,9 +60,6 @@ object {
 		}
 		p { margin: 0; }
 	}
-	.entry-content {
-		margin-bottom: 9px;
-	}
 	.equipment {
 		text-align: center;
 		vertical-align: top;
@@ -64,7 +71,11 @@ object {
 			text-transform: uppercase;
 		}
 	}
-	.entry-footer {
-		margin-top: 20px;
+}
+.single-new {
+	.entry-meta {
+		margin-bottom: 1em;
+		a { font-weight: 700; }
+		.updated-on { font-style: italic; }
 	}
 }

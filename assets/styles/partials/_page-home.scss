@@ -4,8 +4,7 @@
 
 body.home,
 body.page-template-default,
-body.page-template-page-map,
-body.page-template-page-gardens {
+body.page-template-page-map {
 	h2 {
 		@include sec-tit(14px,underline,14px,14px);
 	}

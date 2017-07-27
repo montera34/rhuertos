@@ -253,23 +253,36 @@ object {
   margin-left: auto;
 }
 
-.single-garden .entry-title {
+.single-garden .entry-title,
+.single-new .entry-title {
   font-family: 'Lato',sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.1em;
   text-transform: uppercase;
 }
-.single-garden .entry-subtitle {
+.single-garden .entry-subtitle,
+.single-new .entry-subtitle {
   font: 700 14px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: underline;
   margin-top: 0;
   margin-bottom: 14px;
 }
-.single-garden .entry-subtitle:before, .single-garden .entry-subtitle:after {
+.single-garden .entry-subtitle:before, .single-garden .entry-subtitle:after,
+.single-new .entry-subtitle:before,
+.single-new .entry-subtitle:after {
   content: '·';
 }
+.single-garden .entry-content,
+.single-new .entry-content {
+  margin-bottom: 9px;
+}
+.single-garden .entry-footer,
+.single-new .entry-footer {
+  margin-top: 20px;
+}
+
 .single-garden dl.entry-meta dt {
   font-weight: normal;
   text-transform: uppercase;
@@ -283,9 +296,6 @@ object {
 .single-garden dl.entry-meta p {
   margin: 0;
 }
-.single-garden .entry-content {
-  margin-bottom: 9px;
-}
 .single-garden .equipment {
   text-align: center;
   vertical-align: top;
@@ -297,8 +307,15 @@ object {
   line-height: 1.1em;
   text-transform: uppercase;
 }
-.single-garden .entry-footer {
-  margin-top: 20px;
+
+.single-new .entry-meta {
+  margin-bottom: 1em;
+}
+.single-new .entry-meta a {
+  font-weight: 700;
+}
+.single-new .entry-meta .updated-on {
+  font-style: italic;
 }
 
 /* ==========================================================================
@@ -325,8 +342,7 @@ object {
    ========================================================================== */
 body.home h2,
 body.page-template-default h2,
-body.page-template-page-map h2,
-body.page-template-page-gardens h2 {
+body.page-template-page-map h2 {
   font: 700 14px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: underline;
@@ -337,9 +353,7 @@ body.home h2:before, body.home h2:after,
 body.page-template-default h2:before,
 body.page-template-default h2:after,
 body.page-template-page-map h2:before,
-body.page-template-page-map h2:after,
-body.page-template-page-gardens h2:before,
-body.page-template-page-gardens h2:after {
+body.page-template-page-map h2:after {
   content: '·';
 }
 

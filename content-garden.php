@@ -58,7 +58,7 @@ foreach ( $fields as $k => $f ) {
 	<?php echo $icon; ?>
 	<div class="<?php echo $loop_prefix; ?>-text"<?php echo $loop_style; ?>>
 		<header class="<?php echo $loop_prefix; ?>-heading">
-			<a href="<?php echo $loop_perma ?>"><h3 class="<?php echo $loop_prefix; ?>-tit"<?php echo $loop_style ?>><?php echo $loop_tit ?></h2></a>
+			<a href="<?php echo $loop_perma ?>"><h3 class="<?php echo $loop_prefix; ?>-tit"<?php echo $loop_style ?>><?php echo $loop_tit ?></h3></a>
 		</header>
 		<?php //echo $address; ?>
 		<?php echo $district; ?>

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-07-05 01:44+0200\n"
-"PO-Revision-Date: 2017-07-05 01:44+0200\n"
+"POT-Creation-Date: 2017-07-27 10:09+0200\n"
+"PO-Revision-Date: 2017-07-27 10:10+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Poedit 2.0.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 "X-Poedit-SearchPathExcluded-1: .sass-cache\n"
@@ -57,9 +57,17 @@ msgstr ""
 msgid "Month: %s"
 msgstr ""
 
+#: archive.php:37
+msgid "F Y"
+msgstr ""
+
 #: archive.php:40
 #, php-format
 msgid "Year: %s"
+msgstr ""
+
+#: archive.php:40
+msgid "Y"
 msgstr ""
 
 #: archive.php:43
@@ -156,8 +164,8 @@ msgstr ""
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: content-page.php:35 content-search.php:53 content-single-garden.php:122
-#: content-single.php:58 content.php:55
+#: content-page.php:35 content-search.php:53 content-single-garden.php:126
+#: content-single-new.php:24 content-single.php:58 content.php:55
 msgid "Edit"
 msgstr "Editar"
 
@@ -170,7 +178,7 @@ msgstr ""
 #: content-search.php:34 content.php:36
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Publicado en %1$s"
 
 #: content-search.php:44 content.php:46
 #, php-format
@@ -229,7 +237,7 @@ msgstr "Entidades que participan y colaboran"
 msgid "Equipment"
 msgstr "Equipamiento"
 
-#: content-single-garden.php:101
+#: content-single-garden.php:105
 msgid "Location"
 msgstr "Localización"
 
@@ -359,6 +367,11 @@ msgstr ""
 msgid "Please contact the administrator of this site for help."
 msgstr ""
 
+#: lib/class-tgm-plugin-activation.php:1881
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
 #: lib/class-tgm-plugin-activation.php:2167
 msgid "Required"
 msgstr "Necesario"
@@ -403,6 +416,15 @@ msgstr ""
 msgid "Update recommended"
 msgstr ""
 
+#: lib/class-tgm-plugin-activation.php:2235
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2371
+msgid "unknown"
+msgstr ""
+
 #: lib/class-tgm-plugin-activation.php:2379
 msgid "Installed version:"
 msgstr ""
@@ -441,6 +463,21 @@ msgstr "Versión"
 #: lib/class-tgm-plugin-activation.php:2443
 msgid "Status"
 msgstr "Estado"
+
+#: lib/class-tgm-plugin-activation.php:2491
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2495
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2500
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
 
 #: lib/class-tgm-plugin-activation.php:2603
 msgid "Install"
@@ -545,6 +582,28 @@ msgstr "Artículos siguientes <span class=\"meta-nav\">&rarr;</span>"
 msgid "Post navigation"
 msgstr "Navegación de artículos"
 
+#: lib/inc/template-tags.php:55
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr ""
+
+#: lib/inc/template-tags.php:56
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: lib/inc/template-tags.php:71
+msgid "updated on"
+msgstr "actualizado el"
+
+#: lib/inc/template-tags.php:82
+#, php-format
+msgid "Posted on %s"
+msgstr "Publicado el %s"
+
+#: lib/inc/template-tags.php:87
+#, php-format
+msgid "by %s"
+msgstr "por %s"
+
 #: lib/inc/template-tags.php:151
 msgid "Search"
 msgstr "Buscar"
@@ -564,7 +623,7 @@ msgstr "Siguiente"
 #: lib/inc/template-tags.php:259
 #, php-format
 msgid "Content updated on %s"
-msgstr ""
+msgstr "Contenido actualizado el %s"
 
 #: lib/init.php:53
 msgid "Header Menu"
