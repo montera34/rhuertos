@@ -24,10 +24,16 @@
 }
 
 /* Box shadow */
-@mixin box-shadow($shadows...) {
+@mixin box-shadow($shadows) {
   -moz-box-shadow: $shadows;
   -webkit-box-shadow: $shadows;
   box-shadow: $shadows;
+}
+/* Border radius */
+@mixin border-radius($topleft,$topright,$bottomright,$bottomleft) {
+  -moz-border-radius: $topleft $topright $bottomright $bottomleft;
+  -webkit-border-radius: $topleft $topright $bottomright $bottomleft;
+  border-radius: $topleft $topright $bottomright $bottomleft;
 }
 
 /* H2 */

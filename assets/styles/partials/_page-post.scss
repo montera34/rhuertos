@@ -22,9 +22,11 @@ object {
 	display: block;
 	margin-left: auto;
 }
+.wp-audio-shortcode { margin-bottom: 1em; }
 
 .single-garden,
-.single-new {
+.single-new,
+.single-download {
 	.entry-title {
 		font: {
 			family: 'Lato',sans-serif;
@@ -72,10 +74,25 @@ object {
 		}
 	}
 }
-.single-new {
+.single-new,
+.single-download {
 	.entry-meta {
 		margin-bottom: 1em;
 		a { font-weight: 700; }
 		.updated-on { font-style: italic; }
+	}
+}
+.single-download {
+	.download-file {
+		margin-bottom: 1em;
+		text-align: center;
+		a {
+			display: inline-block;
+			background-color: $brand-primary-transparent;
+			color: #fff;
+			padding: 40px 30px;
+			@include border-radius(55px,55px,55px,55px);
+			&:hover { background-color: $brand-primary; }
+		}
 	}
 }

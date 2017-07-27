@@ -28,6 +28,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * @include fontface('family', 'assets/fonts/', 'myfontname');
  */
 /* Box shadow */
+/* Border radius */
 /* H2 */
 /* FILTERS */
 /* ==========================================================================
@@ -253,8 +254,13 @@ object {
   margin-left: auto;
 }
 
+.wp-audio-shortcode {
+  margin-bottom: 1em;
+}
+
 .single-garden .entry-title,
-.single-new .entry-title {
+.single-new .entry-title,
+.single-download .entry-title {
   font-family: 'Lato',sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -262,7 +268,8 @@ object {
   text-transform: uppercase;
 }
 .single-garden .entry-subtitle,
-.single-new .entry-subtitle {
+.single-new .entry-subtitle,
+.single-download .entry-subtitle {
   font: 700 14px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: underline;
@@ -271,15 +278,19 @@ object {
 }
 .single-garden .entry-subtitle:before, .single-garden .entry-subtitle:after,
 .single-new .entry-subtitle:before,
-.single-new .entry-subtitle:after {
+.single-new .entry-subtitle:after,
+.single-download .entry-subtitle:before,
+.single-download .entry-subtitle:after {
   content: '·';
 }
 .single-garden .entry-content,
-.single-new .entry-content {
+.single-new .entry-content,
+.single-download .entry-content {
   margin-bottom: 9px;
 }
 .single-garden .entry-footer,
-.single-new .entry-footer {
+.single-new .entry-footer,
+.single-download .entry-footer {
   margin-top: 20px;
 }
 
@@ -308,14 +319,32 @@ object {
   text-transform: uppercase;
 }
 
-.single-new .entry-meta {
+.single-new .entry-meta,
+.single-download .entry-meta {
   margin-bottom: 1em;
 }
-.single-new .entry-meta a {
+.single-new .entry-meta a,
+.single-download .entry-meta a {
   font-weight: 700;
 }
-.single-new .entry-meta .updated-on {
+.single-new .entry-meta .updated-on,
+.single-download .entry-meta .updated-on {
   font-style: italic;
+}
+
+.single-download .download-file {
+  margin-bottom: 1em;
+  text-align: center;
+}
+.single-download .download-file a {
+  display: inline-block;
+  background-color: rgba(43, 52, 35, 0.6);
+  color: #fff;
+  padding: 40px 30px;
+  border-radius: 55px 55px 55px 55px;
+}
+.single-download .download-file a:hover {
+  background-color: #2b3423;
 }
 
 /* ==========================================================================

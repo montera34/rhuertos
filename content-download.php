@@ -27,7 +27,7 @@ foreach ( $fields as $k => $f ) {
 			elseif (strpos($f_mime, 'video') !== false) { $f_mime_i = 'file-video-o';}
 			else { $f_mime_i = 'file-archive-o';}
 			$f_url = $f['guid'];
-			$$k = '<footer class="'.$loop_prefix.'-'.$k.'"><a href="'.$f['guid'].'"><i class="fa fa-2x fa-arrow-down"></i> <i class="fa fa-2x fa-'.$f_mime_i.'"></i></a></footer>';
+			$$k = '<footer class="'.$loop_prefix.'-'.$k.'"><a href="'.$f_url.'"><i class="fa fa-2x fa-arrow-down"></i> <i class="fa fa-2x fa-'.$f_mime_i.'"></i></a></footer>';
 			break;
 		default :
 			$$k = ( $f != '' ) ? '<div class="'.$loop_prefix.'-'.$k.'">' .$f. '</div>': '';
