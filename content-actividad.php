@@ -10,7 +10,7 @@ if ( has_post_thumbnail() ) {
 
 $loop_tit = get_the_title();
 $fields = array(
-	'date' => get_post_meta($post->ID,'_act_date_end',true),
+//	'date' => get_post_meta($post->ID,'_act_date_end',true),
 	'garden' => get_post_meta($post->ID,'_act_garden',true),
 	'desc' => get_the_excerpt(),
 	'org' => get_the_terms($post->ID,'organizador')
@@ -28,14 +28,25 @@ foreach ( $fields as $k => $f ) {
 			break;
 		case 'garden' :
 			if ( $f != '' ) {
-				$garden = '<div class="'.$loop_prefix.'-'.$k.'"><strong>'.$f['post_title'].'</strong></div>';
-			}
+				$garden = '<div class="'.$loop_prefix.'-'.$k.'"><i class="fa fa-map-marker"></i> <strong>'.$f['post_title'].'</strong></div>';
+			} else { $garden = '<div class="'.$loop_prefix.'-'.$k.'"><i class="fa fa-map-marker"></i> '.__('See content for details','_mbbasetheme').'</div>'; }
 			break;
 		default :
 			$$k = ( $f != '' ) ? '<div class="'.$loop_prefix.'-'.$k.'">' .$f. '</div>': '';
 			break;
 	}
 }
+
+// date
+$bd = get_post_meta($post->ID,'_act_date_begin',true);
+$bd_raw = strtotime(pods_field_raw ( 'actividad', $post->ID, '_act_date_begin', true ));
+$ed = get_post_meta($post->ID,'_act_date_end',true);
+$ed_raw = strtotime(pods_field_raw ( 'actividad', $post->ID, '_act_date_end', true ));
+$now = strtotime( date("Y-m-d") );
+$all_day = get_post_meta($post->ID,'_act_all_day',true);
+
+if ( $bd_raw == $ed_raw ) { $date = '<i class="fa fa-calendar-o"></i> '.$bd; }
+else { $date = '<i class="fa fa-calendar-o"></i> '.$bd.' <i class="fa fa-chevron-right"></i> '.$ed; }
 ?>
 
 <article class="<?php echo $loop_classes; ?>">

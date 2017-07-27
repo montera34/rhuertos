@@ -260,7 +260,8 @@ object {
 
 .single-garden .entry-title,
 .single-new .entry-title,
-.single-download .entry-title {
+.single-download .entry-title,
+.single-actividad .entry-title {
   font-family: 'Lato',sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -269,7 +270,8 @@ object {
 }
 .single-garden .entry-subtitle,
 .single-new .entry-subtitle,
-.single-download .entry-subtitle {
+.single-download .entry-subtitle,
+.single-actividad .entry-subtitle {
   font: 700 14px "Museo", sans-serif;
   text-transform: uppercase;
   text-decoration: underline;
@@ -280,17 +282,21 @@ object {
 .single-new .entry-subtitle:before,
 .single-new .entry-subtitle:after,
 .single-download .entry-subtitle:before,
-.single-download .entry-subtitle:after {
+.single-download .entry-subtitle:after,
+.single-actividad .entry-subtitle:before,
+.single-actividad .entry-subtitle:after {
   content: '·';
 }
 .single-garden .entry-content,
 .single-new .entry-content,
-.single-download .entry-content {
+.single-download .entry-content,
+.single-actividad .entry-content {
   margin-bottom: 9px;
 }
 .single-garden .entry-footer,
 .single-new .entry-footer,
-.single-download .entry-footer {
+.single-download .entry-footer,
+.single-actividad .entry-footer {
   margin-top: 20px;
 }
 
@@ -320,15 +326,18 @@ object {
 }
 
 .single-new .entry-meta,
-.single-download .entry-meta {
+.single-download .entry-meta,
+.single-actividad .entry-meta {
   margin-bottom: 1em;
 }
 .single-new .entry-meta a,
-.single-download .entry-meta a {
+.single-download .entry-meta a,
+.single-actividad .entry-meta a {
   font-weight: 700;
 }
 .single-new .entry-meta .updated-on,
-.single-download .entry-meta .updated-on {
+.single-download .entry-meta .updated-on,
+.single-actividad .entry-meta .updated-on {
   font-style: italic;
 }
 
@@ -345,6 +354,16 @@ object {
 }
 .single-download .download-file a:hover {
   background-color: #2b3423;
+}
+
+.single-actividad .actividad #map {
+  height: 300px;
+  margin-bottom: 1em;
+}
+.single-actividad .actividad-org-i {
+  height: 26px;
+  width: auto;
+  vertical-align: bottom;
 }
 
 /* ==========================================================================

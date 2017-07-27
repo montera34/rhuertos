@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-07-27 10:09+0200\n"
-"PO-Revision-Date: 2017-07-27 10:10+0200\n"
+"POT-Creation-Date: 2017-07-28 01:00+0200\n"
+"PO-Revision-Date: 2017-07-28 01:00+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -164,8 +164,9 @@ msgstr ""
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: content-page.php:35 content-search.php:53 content-single-garden.php:126
-#: content-single-new.php:24 content-single.php:58 content.php:55
+#: content-page.php:35 content-search.php:53 content-single-actividad.php:73
+#: content-single-download.php:39 content-single-garden.php:126
+#: content-single-new.php:23 content-single.php:58 content.php:55
 msgid "Edit"
 msgstr "Editar"
 
@@ -196,6 +197,15 @@ msgstr "1 comentario"
 #: content-search.php:50 content.php:52
 msgid "% Comments"
 msgstr "% comentarios"
+
+#: content-single-actividad.php:48
+msgid "See content for details"
+msgstr "Más información en el contenido"
+
+#: content-single-actividad.php:58
+#, php-format
+msgid "Organizer: %s"
+msgstr "Organizador: %s"
 
 #: content-single-garden.php:82
 msgid "Address"
@@ -590,37 +600,38 @@ msgstr ""
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: lib/inc/template-tags.php:71
-msgid "updated on"
-msgstr "actualizado el"
-
-#: lib/inc/template-tags.php:82
+#: lib/inc/template-tags.php:87
 #, php-format
 msgid "Posted on %s"
 msgstr "Publicado el %s"
 
-#: lib/inc/template-tags.php:87
+#: lib/inc/template-tags.php:92
+#, php-format
+msgid "updated on %s"
+msgstr "actualizado el %s"
+
+#: lib/inc/template-tags.php:97
 #, php-format
 msgid "by %s"
 msgstr "por %s"
 
-#: lib/inc/template-tags.php:151
+#: lib/inc/template-tags.php:161
 msgid "Search"
 msgstr "Buscar"
 
-#: lib/inc/template-tags.php:155
+#: lib/inc/template-tags.php:165
 msgid "Search results: "
 msgstr "Resultados de la búsqueda:"
 
-#: lib/inc/template-tags.php:195
+#: lib/inc/template-tags.php:205
 msgid "Previous"
 msgstr "Previo"
 
-#: lib/inc/template-tags.php:199
+#: lib/inc/template-tags.php:209
 msgid "Next"
 msgstr "Siguiente"
 
-#: lib/inc/template-tags.php:259
+#: lib/inc/template-tags.php:269
 #, php-format
 msgid "Content updated on %s"
 msgstr "Contenido actualizado el %s"
@@ -677,6 +688,9 @@ msgstr "Noticias"
 #: templates/page-blog.php:77
 msgid "Downloads"
 msgstr "Descargas"
+
+#~ msgid "updated on"
+#~ msgstr "actualizado el"
 
 #~ msgid "Download the map in PDF format"
 #~ msgstr "Descargar el mapa en formato PDF"
