@@ -6,11 +6,10 @@
 $loop_prefix = 'new';
 $img_size = 'thumb';
 
-$img_other = get_post_meta($post->ID,'_img_other',true);
-if ( $img_other != '' ) {
-	$src = wp_get_attachment_image_src( $img_other['ID'],$img_size );
-	$loop_img_other = '<div class="col-sm-4"><figure class="'.$loop_prefix.'-img-other"><img class="img-responsive" src="'.$src[0].'" alt="'.get_the_title().'" /></figure></div>';
-} else { $loop_img_other = ""; }
+if ( has_post_thumbnail() ) {
+	$loop_image = '<div class="col-md-4"><figure class="'.$loop_prefix.'-img">'.get_the_post_thumbnail($post->ID,$img_size,array('class' => 'img-responsive')).'</figure></div>';
+} else { $loop_image = ""; }
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('container'); ?>>
@@ -29,6 +28,6 @@ if ( $img_other != '' ) {
 		<div class="col-sm-8">
 			<div class="entry-content"><?php the_content(); ?></div>
 		</div>
-		<?php echo $loop_img_other; ?>
+		<?php echo $loop_image; ?>
 	</div>
 </article><!-- #post-## -->
