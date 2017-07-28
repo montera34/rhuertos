@@ -121,7 +121,9 @@ function _mbbasetheme_setup() {
 	// Remove Read More Jump
 	// Function location: /lib/theme-functions.php
 	add_filter( 'the_content_more_link', 'mb_remove_more_jump_link' );
-
+	
+	// modifies some loops
+	add_filter( 'pre_get_posts', 'mb_custom_loops' );
 }
 endif; // _mbbasetheme_setup
 

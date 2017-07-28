@@ -206,3 +206,14 @@ function mb_remove_more_jump_link( $link ) {
 	}
 	return $link;
 }
+
+/**
+ * Modifies some loops
+ */
+function mb_custom_loops($query) {
+	if ( is_search() && $query->is_main_query() ) {
+		$query->set( 'post_type',array('garden'));
+	}
+	return $query;
+}
+

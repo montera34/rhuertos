@@ -427,6 +427,7 @@ body.page-template-default h1:before, body.page-template-default h1:after {
   content: '·';
 }
 
+body.search h1,
 body.post-type-archive h1 {
   font: 700 16px "Museo", sans-serif;
   text-transform: uppercase;
@@ -434,8 +435,15 @@ body.post-type-archive h1 {
   margin-top: 0px;
   margin-bottom: 14px;
 }
-body.post-type-archive h1:before, body.post-type-archive h1:after {
+body.search h1:before, body.search h1:after,
+body.post-type-archive h1:before,
+body.post-type-archive h1:after {
   content: '·';
+}
+body.search h1 .search-string:before, body.search h1 .search-string:after,
+body.post-type-archive h1 .search-string:before,
+body.post-type-archive h1 .search-string:after {
+  content: '"';
 }
 
 body.home .actividad, body.home .new, body.home .download,
@@ -484,16 +492,19 @@ body.post-type-archive .download-file {
 }
 
 body.home .garden-heading,
+body.search .garden-heading,
 body.page-template-page-gardens .garden-heading {
   display: table-row;
 }
 body.home .garden h3,
+body.search .garden h3,
 body.page-template-page-gardens .garden h3 {
   font: 900 15px/1.1em 'Lato', sans-serif;
   margin: 0;
   text-transform: uppercase;
 }
 body.home .garden-text,
+body.search .garden-text,
 body.page-template-page-gardens .garden-text {
   padding: 7px 10px;
   display: table;
@@ -501,15 +512,18 @@ body.page-template-page-gardens .garden-text {
   height: 100px;
 }
 body.home .garden-address,
+body.search .garden-address,
 body.page-template-page-gardens .garden-address {
   font: 400 14px 'Lato', sans-serif;
 }
 body.home .garden-district,
+body.search .garden-district,
 body.page-template-page-gardens .garden-district {
   display: table-cell;
   vertical-align: bottom;
 }
 body.home .garden-district-inner,
+body.search .garden-district-inner,
 body.page-template-page-gardens .garden-district-inner {
   display: inline-block;
   font: 400 14px 'Lato', sans-serif;
@@ -519,10 +533,12 @@ body.page-template-page-gardens .garden-district-inner {
   text-transform: uppercase;
 }
 body.home .garden-img,
+body.search .garden-img,
 body.page-template-page-gardens .garden-img {
   position: relative;
 }
 body.home .garden-img figcaption,
+body.search .garden-img figcaption,
 body.page-template-page-gardens .garden-img figcaption {
   position: absolute;
   bottom: 20px;
@@ -553,13 +569,16 @@ body.home .garden {
   margin-bottom: 18px;
 }
 
+body.search .garden,
 body.page-template-page-gardens .garden {
   margin-bottom: 30px;
 }
+body.search .garden-filters,
 body.page-template-page-gardens .garden-filters {
   margin-top: 0px;
   margin-bottom: 18px;
 }
+body.search .garden-filter-tit,
 body.page-template-page-gardens .garden-filter-tit {
   font: 700 16px "Museo", sans-serif;
   text-transform: uppercase;
@@ -572,17 +591,22 @@ body.page-template-page-gardens .garden-filter-tit {
   display: inline-block;
   padding: 4px 5px 3px;
 }
-body.page-template-page-gardens .garden-filter-tit:before, body.page-template-page-gardens .garden-filter-tit:after {
+body.search .garden-filter-tit:before, body.search .garden-filter-tit:after,
+body.page-template-page-gardens .garden-filter-tit:before,
+body.page-template-page-gardens .garden-filter-tit:after {
   content: '·';
 }
+body.search .garden-filter,
 body.page-template-page-gardens .garden-filter {
   display: inline;
   padding-left: 14px;
 }
+body.search .garden-filter li,
 body.page-template-page-gardens .garden-filter li {
   padding-left: 0;
   padding-right: 9px;
 }
+body.search .garden-filter-district a,
 body.page-template-page-gardens .garden-filter-district a {
   display: inline-block;
   font: 400 14px 'Lato', sans-serif;
@@ -591,6 +615,7 @@ body.page-template-page-gardens .garden-filter-district a {
   padding: 3px 5px;
   text-transform: uppercase;
 }
+body.search .garden-filter-typology a,
 body.page-template-page-gardens .garden-filter-typology a {
   display: inline-block;
   font: 400 14px 'Lato', sans-serif;

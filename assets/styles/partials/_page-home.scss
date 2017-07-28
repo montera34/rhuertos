@@ -20,9 +20,13 @@ body.page-template-default {
 	}
 
 }
+body.search,
 body.post-type-archive {
 	h1 {
 		@include sec-tit(16px,underline,0px,14px);
+	 	.search-string {
+			&:before, &:after { content: '"'; }
+		}
 	}
 }
 body.home,
@@ -45,6 +49,7 @@ body.post-type-archive {
 	}
 }
 body.home,
+body.search,
 body.page-template-page-gardens {
 	.garden {
 		&-heading {
@@ -107,6 +112,7 @@ body.page-template-page-map {
 body.home {
 	.garden { margin-bottom: 18px; }
 }
+body.search,
 body.page-template-page-gardens {
 	.garden {
 		margin-bottom: 30px;
