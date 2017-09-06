@@ -28,7 +28,7 @@ $fields = array(
 //	'typo' => get_the_terms($post->ID,'typology'),
 	'equipment' => get_the_terms($post->ID,'equipment'),
 	'icon' => get_post_meta($post->ID,'_garden_icon',true),
-
+	'updated' => get_post_meta($post->ID,'_garden_updated',true)
 );
 
 foreach ( $fields as $k => $f ) {
@@ -122,7 +122,7 @@ foreach ( $fields as $k => $f ) {
 				<div><?php echo $icon; ?></div>
 
 				<?php the_title( '<div class="entry-title">', '</div>' ); ?>
-				<?php echo _mbbasetheme_get_updated_on_date($post->ID); ?>
+				<?php echo $updated; ?>
 				<?php edit_post_link( __( 'Edit', '_mbbasetheme' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer>
 		</div>
