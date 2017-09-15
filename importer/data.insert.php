@@ -10,6 +10,7 @@ $delimiter = ","; // field delimiter character
 $enclosure = '"'; // field enclosure character
 
 $prefix = "_garden"; // prefix for custom fields and other contents
+$user = 39; // user ID to asign the contents to
 
 // open the data file
 $fp = fopen($csv_filename,'r');
@@ -45,12 +46,7 @@ if ( $fp !== FALSE ) { // if the file exists and is readable
 				$prefix.'_updated' => $fp_csv[29],
 			);
 
-			// prepare terms to insert if there is just one
-			//$terms = array(
-			//	'montera34_type' => $type
-			//);
-
-			// prepare terms to insert if there are more than one
+			// TAXONOMIES
 			$districts = explode(",",$fp_csv[7]);
 			$typologies = explode(",",$fp_csv[12]);
 			$governances = explode(",",$fp_csv[19]);
@@ -62,11 +58,13 @@ if ( $fp !== FALSE ) { // if the file exists and is readable
 				'equipment' => $equipments
 			);
 
-			// insert post
+			// STATUS
+			$status = ( $fp_csv[30] != '' ) ? $fp_csv[30] : 'publish';
+			// INSERT POST
 			$args = array(
 				'post_type' => 'garden',
-				'post_status' => 'publish',
-				'post_author' => 1,
+				'post_status' => $status,
+				'post_author' => $user,
 				'post_title' => $tit,
 				'post_content' => $content,
 				//'post_excerpt' => $excerpt,
