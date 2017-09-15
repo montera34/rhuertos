@@ -2,3 +2,4 @@ node_modules
 .sass-cache
 .*.swp
 .*.swo
+importer/data.csv

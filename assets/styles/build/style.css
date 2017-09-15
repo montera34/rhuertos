@@ -536,6 +536,7 @@ body.home .garden-img,
 body.search .garden-img,
 body.page-template-page-gardens .garden-img {
   position: relative;
+  min-height: 104px;
 }
 body.home .garden-img figcaption,
 body.search .garden-img figcaption,
@@ -605,6 +606,7 @@ body.search .garden-filter li,
 body.page-template-page-gardens .garden-filter li {
   padding-left: 0;
   padding-right: 9px;
+  padding-bottom: 9px;
 }
 body.search .garden-filter-district a,
 body.page-template-page-gardens .garden-filter-district a {

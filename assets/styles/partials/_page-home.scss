@@ -78,6 +78,7 @@ body.page-template-page-gardens {
 		}
 		&-img {
 			position: relative;
+			min-height: 104px;
 			figcaption {
 				position: absolute;
 				bottom: 20px;
@@ -135,6 +136,7 @@ body.page-template-page-gardens {
 		li {
 			padding-left: 0;
 			padding-right: 9px;
+			padding-bottom: 9px;
 		}
 		&-district {
 			a { @include filter(#333); }
