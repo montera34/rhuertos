@@ -16,7 +16,7 @@ get_header(); ?>
 	// ACTIVITIES
 	////
 	$args = array(
-		'post_type' => 'actividad',
+		'post_type' => 'activity',
 		'posts_per_page' => '4',
 		'meta_query' => array(
 			array(

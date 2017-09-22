@@ -20,7 +20,7 @@ get_header(); ?>
 	// NEWS
 	////
 	$args = array(
-		'post_type' => array('actividad','download','new'),
+		'post_type' => array('activity','download','new'),
 		'posts_per_page' => '4',
 /*		'meta_query' => array(
 			array(

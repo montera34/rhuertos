@@ -11,13 +11,13 @@ if ( has_post_thumbnail() ) {
 } else { $loop_image = ""; }
 
 $bd = get_post_meta($post->ID,'_act_date_begin',true);
-$bd_raw = strtotime(pods_field_raw ( 'actividad', $post->ID, '_act_date_begin', true ));
+$bd_raw = strtotime(pods_field_raw ( 'activity', $post->ID, '_act_date_begin', true ));
 $bh = get_post_meta($post->ID,'_act_hour_begin',true);
-$bh_raw = strtotime(pods_field_raw ( 'actividad', $post->ID, '_act_hour_begin', true ));
+$bh_raw = strtotime(pods_field_raw ( 'activity', $post->ID, '_act_hour_begin', true ));
 $ed = get_post_meta($post->ID,'_act_date_end',true);
-$ed_raw = strtotime(pods_field_raw ( 'actividad', $post->ID, '_act_date_end', true ));
+$ed_raw = strtotime(pods_field_raw ( 'activity', $post->ID, '_act_date_end', true ));
 $eh = get_post_meta($post->ID,'_act_hour_end',true);
-$eh_raw = strtotime(pods_field_raw ( 'actividad', $post->ID, '_act_hour_end', true ));
+$eh_raw = strtotime(pods_field_raw ( 'activity', $post->ID, '_act_hour_end', true ));
 $now = strtotime( date("Y-m-d") );
 $all_day = get_post_meta($post->ID,'_act_all_day',true);
 

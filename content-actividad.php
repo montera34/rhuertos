@@ -39,9 +39,9 @@ foreach ( $fields as $k => $f ) {
 
 // date
 $bd = get_post_meta($post->ID,'_act_date_begin',true);
-$bd_raw = strtotime(pods_field_raw ( 'actividad', $post->ID, '_act_date_begin', true ));
+$bd_raw = strtotime(pods_field_raw ( 'activity', $post->ID, '_act_date_begin', true ));
 $ed = get_post_meta($post->ID,'_act_date_end',true);
-$ed_raw = strtotime(pods_field_raw ( 'actividad', $post->ID, '_act_date_end', true ));
+$ed_raw = strtotime(pods_field_raw ( 'activity', $post->ID, '_act_date_end', true ));
 $now = strtotime( date("Y-m-d") );
 $all_day = get_post_meta($post->ID,'_act_all_day',true);
 
