@@ -124,6 +124,12 @@ function _mbbasetheme_setup() {
 	
 	// modifies some loops
 	add_filter( 'pre_get_posts', 'mb_custom_loops' );
+
+
+	// add capabilities to some WordPress roles when this theme is activated
+	add_action( 'after_switch_theme', 'mb_add_caps_to_roles', 10 ); 
+	// remove capabilities given by this theme
+	add_action( 'switch_theme', 'mb_remove_caps_to_roles', 10 );
 }
 endif; // _mbbasetheme_setup
 

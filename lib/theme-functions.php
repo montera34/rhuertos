@@ -58,22 +58,22 @@ function mb_image_sizes_names( $sizes ) {
 function mb_widgets_init() {
 	// Main Sidebar
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', '_mbbasetheme' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'name'          => __( 'Footer Widget Area', '_mbbasetheme' ),
+		'id'            => 'epi-widgets',
+		'description'   => __( 'Add some content to the footer, under the menu.', '_mbbasetheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s space">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<strong class="epi-widget-title">',
+		'after_title'   => '</strong>',
 	) );
 	// Footer Widget Area
 	register_sidebar( array(
-		'name'          => __( 'Footer Widget Area', '_mbbasetheme' ),
-		'id'            => 'epi-widgets',
-		'description'   => '',
+		'name'          => __( 'Credits Widget Area', '_mbbasetheme' ),
+		'id'            => 'credits-widgets',
+		'description'   => __( 'dd two widget for the credit area in the footer', '_mbbasetheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s col-sm-6">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
+		'before_title'  => '<h3 class="credits-widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
@@ -216,4 +216,31 @@ function mb_custom_loops($query) {
 	}
 	return $query;
 }
+
+/**
+ *  Adds capabilities to some WordPress roles
+ *  when this theme is activated
+ */
+function mb_add_caps_to_roles() {
+	// Makes sure $wp_roles is initialized
+	get_role( 'editor' );
+
+	global $wp_roles;
+	// Dont use get_role() wrapper, it doesn't work as a one off.
+	// (get_role does not properly return as reference)
+	$wp_roles->role_objects['editor']->add_cap( 'edit_theme_options' );
+}
+/**
+ *  Remove capabilities given by mb_add_caps_to_roles
+ */  
+//
+function mb_remove_caps_to_roles() {
+ 	get_role( 'editor' );
+	global $wp_roles;
+	// Could use the get_role() wrapper here since this function is never
+	// called as a one off.  It is always called to alter the role as
+	// stored in the DB.
+	$wp_roles->role_objects['editor']->remove_cap( 'edit_theme_options' );
+}
+
 

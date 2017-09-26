@@ -37,22 +37,21 @@
 		</nav>
 		<div id="epi-meta" class="container">
 			<div class="row">
-				<div class="col-sm-9 space">
-					<p><img src="<?php echo MB_BLOGTHEME; ?>/assets/images/logo.madrid.medio.ambiente.png" alt="<?php echo __('Logo of Madrid Municipal Enviromental Area','_mbbasetheme'); ?>" /></p>
-					<address>
-						<?php echo __('Environmental Education Department','_mbbasetheme').'<br />'; ?>
-						<?php echo 'Tlf. 914804136<br />'; ?>
-						<?php echo 'educacionsostenible@madrid.es'; ?>
-					</address>
-				</div>
-				<div class="col-sm-3 text-right">
+				<?php if ( is_active_sidebar( 'epi-widgets' ) ) {
+					echo '<div class="col-sm-9 space">';
+					dynamic_sidebar( 'epi-widgets' );
+					echo '</div>';
+					$widget_class = 'col-sm-3';
+				} else { $widget_class = 'col-sm-3 col-sm-offset-9'; } ?>
+				
+				<div class="<?php echo $widget_class; ?> text-right">
 					<img src="<?php echo MB_BLOGTHEME; ?>/assets/images/imago.huertos.madrid.png" alt="<?php echo __('Logo of the Program for urban community gardens in Madrid','_mbbasetheme'); ?>" />
 				</div>
 			</div>
 		</div>
-		<?php if ( is_active_sidebar( 'epi-widgets' ) ) {
-			echo '<div id="epi-widgets" class="container" role="complementary"><div class="row">';
-			dynamic_sidebar( 'epi-widgets' );
+		<?php if ( is_active_sidebar( 'credits-widgets' ) ) {
+			echo '<div id="credits-widgets" class="container" role="complementary"><div class="row">';
+			dynamic_sidebar( 'credits-widgets' );
 			echo "</div></div>";
 		} ?>
 		<div id="credits" class="barw">
