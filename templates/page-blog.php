@@ -13,6 +13,7 @@ get_header(); ?>
 <main id="main" class="site-main" role="main">
 
 	<?php
+	$home = esc_url( home_url( '/' ));
 	// ACTIVITIES
 	////
 	$args = array(
@@ -31,10 +32,10 @@ get_header(); ?>
 	?>
 
 		<section id="activities" class="block container">
-			<header class="row"><h2 class="col-sm-12"><a href="/actividades"><?php _e('Activities','_mbbasetheme') ?></a></h2></header>
+			<header class="row"><h2 class="col-sm-12"><a href="<?php echo $home ?>actividades"><?php _e('Activities','_mbbasetheme') ?></a></h2></header>
 			<div class="row">
 				<?php while ( $activities->have_posts() ) : $activities->the_post();
-					get_template_part( 'content', 'actividad' );
+					get_template_part( 'content', 'activity' );
 				endwhile; // end of the loop. ?>
 			</div>
 		</section><!-- #news -->
@@ -53,7 +54,7 @@ get_header(); ?>
 	?>
 
 		<section id="news" class="block container">
-			<header class="row"><h2 class="col-sm-12"><a href="/noticias"><?php _e('News','_mbbasetheme') ?></a></h2></header>
+			<header class="row"><h2 class="col-sm-12"><a href="<?php echo $home ?>noticias"><?php _e('News','_mbbasetheme') ?></a></h2></header>
 			<div class="row">
 				<?php while ( $news->have_posts() ) : $news->the_post();
 					get_template_part( 'content', 'new' );
@@ -74,7 +75,7 @@ get_header(); ?>
 	?>
 
 		<section id="downloads" class="block container">
-			<header class="row"><h2 class="col-sm-12"><a href="/descargas"><?php _e('Downloads','_mbbasetheme') ?></a></h2></header>
+			<header class="row"><h2 class="col-sm-12"><a href="<?php echo $home ?>descargas"><?php _e('Downloads','_mbbasetheme') ?></a></h2></header>
 			<div class="row">
 				<?php while ( $downloads->have_posts() ) : $downloads->the_post();
 					get_template_part( 'content', 'download' );
