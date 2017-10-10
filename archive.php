@@ -66,8 +66,8 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
 							_e( 'Chats', '_mbbasetheme' );
 
-						elseif ( is_post_type_archive( array('actividad','download','new') ) ) :
-							echo $a_tit;
+						elseif ( is_post_type_archive( array('activity','download','new') ) ) :
+							printf(__( 'Archives of %s', '_mbbasetheme' ), $a_tit);
 						else :
 							_e( 'Archives', '_mbbasetheme' );
 

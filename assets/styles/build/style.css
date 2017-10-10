@@ -205,8 +205,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2030;
 }
 
-.post-type-archive-actividad .menu-blog,
-.single-actividad .menu-blog,
+.post-type-archive-activity .menu-blog,
+.single-activity .menu-blog,
 .post-type-archive-download .menu-blog,
 .single-download .menu-blog,
 .post-type-archive-new .menu-blog,

@@ -23,7 +23,7 @@ $fields = array(
 	'timetable' => get_post_meta($post->ID,'_garden_timetable',true),
 	'members' => get_post_meta($post->ID,'_garden_community_members',true),
 	'kernel' => get_post_meta($post->ID,'_garden_community_kernel',true),
-	'gobernance' => get_the_terms($post->ID,'gobernance'),
+	'governance' => get_the_terms($post->ID,'governance'),
 	'collaborators' => get_post_meta($post->ID,'_garden_collaborators',true),
 //	'typo' => get_the_terms($post->ID,'typology'),
 	'equipment' => get_the_terms($post->ID,'equipment'),
@@ -54,7 +54,7 @@ foreach ( $fields as $k => $f ) {
 			}
 			$loop_eq .= '</ul>';
 			break;
-		case 'district' : case 'gobernance' :
+		case 'district' : case 'governance' :
 			if ( $f === false ) break;
 			foreach ( $f as $t ) {
 				$loop_classes .= ' '.$t->slug;
@@ -86,7 +86,7 @@ foreach ( $fields as $k => $f ) {
 			<?php if ($area != '' ) echo '<dt>'.__('Area','_mbbasetheme').'</dt><dd>'.$area.' m2</dd>'; ?>
 		</dl><!-- .entry-meta -->
 		<dl class="entry-meta col-md-5">
-			<?php if ($gobernance != '' ) echo '<dt>'.__('Gobernance','_mbbasetheme').'</dt><dd>'.$gobernance.'</dd>'; ?>
+			<?php if ($governance != '' ) echo '<dt>'.__('Governance','_mbbasetheme').'</dt><dd>'.$governance.'</dd>'; ?>
 			<?php if ($timetable != '' ) echo '<dt>'.__('Open time','_mbbasetheme').'</dt><dd>'.$timetable.'</dd>'; ?>
 			<?php if ($members != '' ) echo '<dt>'.__('Participants','_mbbasetheme').'</dt><dd>'.$members.'</dd>'; ?>
 			<?php if ($kernel != '' ) echo '<dt>'.__('People in kernel group','_mbbasetheme').'</dt><dd>'.$kernel.'</dd>'; ?>

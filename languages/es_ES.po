@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-10-10 12:07+0200\n"
-"PO-Revision-Date: 2017-10-10 12:08+0200\n"
+"POT-Creation-Date: 2017-10-10 13:18+0200\n"
+"PO-Revision-Date: 2017-10-10 13:19+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -105,6 +105,11 @@ msgstr ""
 #: archive.php:67
 msgid "Chats"
 msgstr ""
+
+#: archive.php:70
+#, php-format
+msgid "Archives of %s"
+msgstr "Archivo de %s"
 
 #: archive.php:72
 msgid "Archives"
@@ -224,7 +229,7 @@ msgid "Area"
 msgstr "Área"
 
 #: content-single-garden.php:89
-msgid "Gobernance"
+msgid "Governance"
 msgstr "Modelo de gestión"
 
 #: content-single-garden.php:90
@@ -682,17 +687,20 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Resultados para la búsqueda %s"
 
-#: templates/page-blog.php:34
+#: templates/page-blog.php:35
 msgid "Activities"
 msgstr "Actividades"
 
-#: templates/page-blog.php:56
+#: templates/page-blog.php:57
 msgid "News"
 msgstr "Noticias"
 
-#: templates/page-blog.php:77
+#: templates/page-blog.php:78
 msgid "Downloads"
 msgstr "Descargas"
+
+#~ msgid "Gobernance"
+#~ msgstr "Modelo de gestión"
 
 #~ msgid "Typology"
 #~ msgstr "Tipología"
