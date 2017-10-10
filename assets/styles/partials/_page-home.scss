@@ -123,7 +123,7 @@ body.page-template-page-gardens {
 		margin-bottom: 18px;
 	}
 	.garden-filter-tit {
-		@include sec-tit(16px,none,0,9px);
+		@include sec-tit(16px,none,0,5px);
 		color: #fff;
 		background-color: $brand-primary;
 		border: 1px solid $brand-primary;
@@ -132,11 +132,11 @@ body.page-template-page-gardens {
 	}
 	.garden-filter {
 		display: inline;
-		padding-left: 14px;
+		padding-left: 10px;
 		li {
 			padding-left: 0;
-			padding-right: 9px;
-			padding-bottom: 9px;
+			padding-right: 5px;
+			padding-bottom: 5px;
 		}
 		&-district {
 			a { @include filter(#333); }

@@ -585,7 +585,7 @@ body.page-template-page-gardens .garden-filter-tit {
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 5px;
   color: #fff;
   background-color: #2b3423;
   border: 1px solid #2b3423;
@@ -600,13 +600,13 @@ body.page-template-page-gardens .garden-filter-tit:after {
 body.search .garden-filter,
 body.page-template-page-gardens .garden-filter {
   display: inline;
-  padding-left: 14px;
+  padding-left: 10px;
 }
 body.search .garden-filter li,
 body.page-template-page-gardens .garden-filter li {
   padding-left: 0;
-  padding-right: 9px;
-  padding-bottom: 9px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 body.search .garden-filter-district a,
 body.page-template-page-gardens .garden-filter-district a {

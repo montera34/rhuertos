@@ -1,18 +1,21 @@
 <?php
 	$filters_out = '';
 	$filters = array(
-		'typology' => array(
-			'name' => __('Typology','_mbbasetheme'),
-			'cols' => '6'
-		),
+//		'typology' => array(
+//			'name' => __('Typology','_mbbasetheme'),
+//			'order' => 'meta_value_num',
+//			'cols' => '6'
+//		),
 		'district' => array(
 			'name' => __('Districts','_mbbasetheme'),
-			'cols' => '6'
+			'order' => 'name',
+			'cols' => '12'
 		)
 	);
 	foreach ( $filters as $f => $d ) {
 		$args = array(
-			'taxonomy' => $f
+			'taxonomy' => $f,
+			'orderby' => $d['order']
 		);
 		$termes = get_terms($args);
 		if ( !is_wp_error($termes) ) {
