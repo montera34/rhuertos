@@ -300,11 +300,11 @@ object {
   margin-top: 20px;
 }
 
-.single-garden dl.entry-meta dt {
-  font-weight: normal;
-  text-transform: uppercase;
-  float: left;
-  padding-right: 10px;
+.single-garden dl.entry-meta dd {
+  margin-bottom: 9px;
+}
+.single-garden dl.entry-meta .garden-address {
+  display: block;
 }
 .single-garden dl.entry-meta .garden-district {
   border: 1px solid;

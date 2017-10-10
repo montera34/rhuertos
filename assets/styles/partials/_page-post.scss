@@ -50,11 +50,11 @@ object {
 }
 .single-garden {
 	dl.entry-meta {
-		dt {
-			font-weight: normal;
-			text-transform: uppercase;
-			float: left;
-			padding-right: 10px;
+		dd {
+			margin-bottom: 9px
+		}
+		.garden-address {
+			display: block;
 		}
 		.garden-district {
 			border: 1px solid;

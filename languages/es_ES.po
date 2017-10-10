@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-09-26 22:31+0200\n"
-"PO-Revision-Date: 2017-09-26 22:32+0200\n"
+"POT-Creation-Date: 2017-10-10 12:07+0200\n"
+"PO-Revision-Date: 2017-10-10 12:08+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -130,15 +130,11 @@ msgstr "Los comentarios están cerrados"
 msgid "See content for details"
 msgstr "Más información en el contenido"
 
-#: content-garden-filters.php:5
-msgid "Typology"
-msgstr "Tipología"
-
-#: content-garden-filters.php:9
+#: content-garden-filters.php:10
 msgid "Districts"
 msgstr "Distritos"
 
-#: content-garden-filters.php:19
+#: content-garden-filters.php:22
 msgid "All"
 msgstr "Todo"
 
@@ -169,7 +165,7 @@ msgid "Pages:"
 msgstr "Páginas:"
 
 #: content-page.php:35 content-search.php:53 content-single-activity.php:65
-#: content-single-download.php:38 content-single-garden.php:126
+#: content-single-download.php:38 content-single-garden.php:129
 #: content-single-new.php:22 content-single.php:58 content.php:55
 msgid "Edit"
 msgstr "Editar"
@@ -223,33 +219,42 @@ msgstr "Sitio web"
 msgid "Begin data"
 msgstr "Fecha de inicio"
 
-#: content-single-garden.php:93
+#: content-single-garden.php:86
 msgid "Area"
 msgstr "Área"
 
-#: content-single-garden.php:94
+#: content-single-garden.php:89
+msgid "Gobernance"
+msgstr "Modelo de gestión"
+
+#: content-single-garden.php:90
 msgid "Open time"
 msgstr "Días y horas de apertura"
 
-#: content-single-garden.php:95
+#: content-single-garden.php:91
 msgid "Participants"
 msgstr "Número de participantes"
 
-#: content-single-garden.php:96
+#: content-single-garden.php:92
 msgid "People in kernel group"
 msgstr "Número de integrantes del grupo motor"
 
-#: content-single-garden.php:97
+#: content-single-garden.php:93
 msgid "Collaborators"
 msgstr "Entidades que participan y colaboran"
 
-#: content-single-garden.php:99
+#: content-single-garden.php:96
 msgid "Equipment"
 msgstr "Equipamiento"
 
-#: content-single-garden.php:105
+#: content-single-garden.php:108
 msgid "Location"
 msgstr "Localización"
+
+#: content-single-garden.php:128
+#, php-format
+msgid "Data collected on %s"
+msgstr "Datos recogidos el %s"
 
 #: content-single.php:37
 #, php-format
@@ -669,8 +674,8 @@ msgid "Credits Widget Area"
 msgstr "Widgets del área de créditos"
 
 #: lib/theme-functions.php:73
-msgid "Add two widget for the credit area in the footer"
-msgstr "Añadir dos widgets para la zona de créditos en el footer"
+msgid "dd two widget for the credit area in the footer"
+msgstr ""
 
 #: search.php:16
 #, php-format
@@ -688,6 +693,12 @@ msgstr "Noticias"
 #: templates/page-blog.php:77
 msgid "Downloads"
 msgstr "Descargas"
+
+#~ msgid "Typology"
+#~ msgstr "Tipología"
+
+#~ msgid "Add two widget for the credit area in the footer"
+#~ msgstr "Añadir dos widgets para la zona de créditos en el footer"
 
 #~ msgid ""
 #~ "Add one widget to include some content under Madrid City Council logo in "

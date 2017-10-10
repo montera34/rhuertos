@@ -23,7 +23,7 @@ $fields = array(
 	'timetable' => get_post_meta($post->ID,'_garden_timetable',true),
 	'members' => get_post_meta($post->ID,'_garden_community_members',true),
 	'kernel' => get_post_meta($post->ID,'_garden_community_kernel',true),
-//	'gobernance' => get_the_terms($post->ID,'gobernance'),
+	'gobernance' => get_the_terms($post->ID,'gobernance'),
 	'collaborators' => get_post_meta($post->ID,'_garden_collaborators',true),
 //	'typo' => get_the_terms($post->ID,'typology'),
 	'equipment' => get_the_terms($post->ID,'equipment'),
@@ -54,7 +54,7 @@ foreach ( $fields as $k => $f ) {
 			}
 			$loop_eq .= '</ul>';
 			break;
-		case 'district' :
+		case 'district' : case 'gobernance' :
 			if ( $f === false ) break;
 			foreach ( $f as $t ) {
 				$loop_classes .= ' '.$t->slug;
@@ -78,26 +78,29 @@ foreach ( $fields as $k => $f ) {
 	<header class="entry-header row">
 		<?php the_title( '<h1 class="entry-title col-sm-12">', '</h1>' ); ?>
 		<div class="clearfix"></div>
-		<dl class="entry-meta col-sm-8">
+		<dl class="entry-meta col-md-3">
 			<?php if ($address != '' || $district != '' ) echo '<dt>'.__('Address','_mbbasetheme').'</dt><dd>'.$address.' '.$district.'</dd>'; ?>
 			<?php if ($email != '' ) echo '<dt>'.__('Email','_mbbasetheme').'</dt><dd>'.$email.'</dd>'; ?>
 			<?php if ($website != '' ) echo '<dt>'.__('Website','_mbbasetheme').'</dt><dd><a href="'.$website.'">'.$website.'</a></dd>'; ?>
 			<?php if ($date_begin != '' ) echo '<dt>'.__('Begin data','_mbbasetheme').'</dt><dd>'.$date_begin.'</dd>'; ?>
+			<?php if ($area != '' ) echo '<dt>'.__('Area','_mbbasetheme').'</dt><dd>'.$area.' m2</dd>'; ?>
 		</dl><!-- .entry-meta -->
+		<dl class="entry-meta col-md-5">
+			<?php if ($gobernance != '' ) echo '<dt>'.__('Gobernance','_mbbasetheme').'</dt><dd>'.$gobernance.'</dd>'; ?>
+			<?php if ($timetable != '' ) echo '<dt>'.__('Open time','_mbbasetheme').'</dt><dd>'.$timetable.'</dd>'; ?>
+			<?php if ($members != '' ) echo '<dt>'.__('Participants','_mbbasetheme').'</dt><dd>'.$members.'</dd>'; ?>
+			<?php if ($kernel != '' ) echo '<dt>'.__('People in kernel group','_mbbasetheme').'</dt><dd>'.$kernel.'</dd>'; ?>
+			<?php if ($collaborators != '' ) echo '<dt>'.__('Collaborators','_mbbasetheme').'</dt><dd>'.$collaborators.'</dd>'; ?>
+		</dl><!-- .entry-meta -->
+		<div class="col-md-4">
+			<h2 class="entry-subtitle"><?php _e('Equipment','_mbbasetheme'); ?></h2>
+			<?php echo $loop_eq ?>
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="row">
 		<div class="col-sm-8">
 			<div class="entry-content"><?php the_content(); ?></div>
-			<dl class="entry-meta">
-			<?php if ($area != '' ) echo '<dt>'.__('Area','_mbbasetheme').'</dt><dd>'.$area.' m2</dd>'; ?>
-			<?php if ($timetable != '' ) echo '<dt>'.__('Open time','_mbbasetheme').'</dt><dd>'.$timetable.'</dd>'; ?>
-			<?php if ($members != '' ) echo '<dt>'.__('Participants','_mbbasetheme').'</dt><dd>'.$members.'</dd>'; ?>
-			<?php if ($kernel != '' ) echo '<dt>'.__('People in kernel group','_mbbasetheme').'</dt><dd>'.$kernel.'</dd>'; ?>
-			<?php if ($collaborators != '' ) echo '<dt>'.__('Collaborators','_mbbasetheme').'</dt><dd>'.$collaboratos.'</dd>'; ?>
-			</dl><!-- .entry-meta -->
-			<h2 class="entry-subtitle"><?php _e('Equipment','_mbbasetheme'); ?></h2>
-			<?php echo $loop_eq ?>
 			<?php
 			$lat = get_post_meta($post->ID,'_garden_lat',true);
 			$lon = get_post_meta($post->ID,'_garden_lon',true);
@@ -122,7 +125,7 @@ foreach ( $fields as $k => $f ) {
 				<div><?php echo $icon; ?></div>
 
 				<?php the_title( '<div class="entry-title">', '</div>' ); ?>
-				<?php echo $updated; ?>
+				<?php if ( $updated != '' ) printf(__('Data collected on %s','_mbbasetheme'),$updated); ?>
 				<?php edit_post_link( __( 'Edit', '_mbbasetheme' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer>
 		</div>
