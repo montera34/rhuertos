@@ -55,7 +55,7 @@ get_header(); ?>
 	?>
 
 		<section id="gardens" class="block container">
-			<header class="row"><h2 class="col-sm-12"><?php _e('Last published gardens','_mbbasetheme') ?></h2></header>
+			<header class="row"><h2 class="col-sm-12"><?php _e('Last gardens','_mbbasetheme') ?></h2></header>
 			<div class="row">
 				<?php while ( $gardens->have_posts() ) : $gardens->the_post();
 					get_template_part( 'content', 'garden' );

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-10-10 13:18+0200\n"
-"PO-Revision-Date: 2017-10-10 13:19+0200\n"
+"POT-Creation-Date: 2017-10-14 00:25+0200\n"
+"PO-Revision-Date: 2017-10-14 00:25+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -309,8 +309,8 @@ msgid "Last publications"
 msgstr "Últimas publicaciones"
 
 #: front-page.php:58
-msgid "Last published gardens"
-msgstr "Últimos huertos incorporados"
+msgid "Last gardens"
+msgstr "Últimos huertos"
 
 #: front-page.php:71
 msgid "Map of community gardens in Madrid"
@@ -698,6 +698,9 @@ msgstr "Noticias"
 #: templates/page-blog.php:78
 msgid "Downloads"
 msgstr "Descargas"
+
+#~ msgid "Last published gardens"
+#~ msgstr "Últimos huertos incorporados"
 
 #~ msgid "Gobernance"
 #~ msgstr "Modelo de gestión"
