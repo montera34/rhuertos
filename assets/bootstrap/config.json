@@ -20,7 +20,7 @@
     "@font-family-serif": "\"Museo\", Georgia, \"Times New Roman\", Times, serif",
     "@font-family-monospace": "Menlo, Monaco, Consolas, \"Courier New\", monospace",
     "@font-family-base": "@font-family-sans-serif",
-    "@font-size-base": "13px",
+    "@font-size-base": "14px",
     "@font-size-large": "ceil((@font-size-base * 1.25))",
     "@font-size-small": "ceil((@font-size-base * 0.85))",
     "@font-size-h1": "floor((@font-size-base * 2.6))",
@@ -415,5 +415,5 @@
     "collapse.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=565839335751ed51aa6b3c2659455d56"
+  "customizerUrl": "https://getbootstrap.com/docs/3.3/customize/?id=6a08fc04237f3cbd85bb74a63d3e45e2"
 }

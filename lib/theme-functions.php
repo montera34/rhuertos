@@ -182,7 +182,7 @@ function mb_scripts() {
 	} elseif ( is_page_template('templates/page-map.php') ) {
 		wp_enqueue_script( 'plugin-wpmap-additional', get_template_directory_uri() . '/assets/js/plugin-wpmap.min.js', array('wpmap-js'), NULL, true );
 	} elseif ( is_page_template('templates/page-faqs.php') ) {
-		wp_enqueue_script( 'page-faqs-js', get_template_directory_uri() . '/assets/js/page-faqs.min.js', array('jquery'), NULL, true );
+//		wp_enqueue_script( 'page-faqs-js', get_template_directory_uri() . '/assets/js/page-faqs.min.js', array('jquery'), NULL, true );
 	}
 }
 /**

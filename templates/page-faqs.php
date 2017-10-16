@@ -82,7 +82,7 @@ get_header(); ?>
 			</div><!-- .col-md-8 .col-sm-9 -->
 	
 			<nav id="faqs-nav" class="col-md-4 col-sm-3 hidden-xs">
-				<?php echo $pages_nav; ?>
+				<?php //echo $pages_nav; ?>
 				<?php echo $parent_image; ?>
 			</nav>
 		</div><!-- .row -->

@@ -81,7 +81,7 @@ img {
    Typography
    ========================================================================== */
 .hentry h3 {
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   text-decoration: underline;
 }
@@ -370,11 +370,11 @@ object {
    Carousel slides
    ========================================================================== */
 .carousel-caption-inner {
-  font: 700 13px "Museo", sans-serif;
+  font: 700 14px "Museo", sans-serif;
   padding: 50px;
 }
 .carousel-caption-inner h3 {
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 .carousel-caption-inner h3:before, .carousel-caption-inner h3:after {
@@ -628,7 +628,7 @@ body.page-template-page-gardens .garden-filter-typology a {
 }
 
 body.page-template-page-faqs .subpage {
-  padding-top: 113px;
+  padding-top: 20px;
 }
 body.page-template-page-faqs h1.parent-tit {
   font: 700 16px "Museo", sans-serif;
