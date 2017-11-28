@@ -11,30 +11,32 @@
 	</div><!-- #content -->
 
 	<footer id="epi" class="site-footer bargl" role="contentinfo">
-		<nav id="epi-menu" class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#epi-menu-collapse">
-						<span class="sr-only"><?php _e('Show/hide menu','_mbbasetheme') ?></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse" id="epi-menu-collapse">
-					<?php $location = "footer";
-					if ( has_nav_menu( $location ) ) {
-						$args = array(
+		<?php $location = "footer";
+		if ( has_nav_menu( $location ) ) { ?>
+			<nav id="epi-menu" class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#epi-menu-collapse">
+							<span class="sr-only"><?php _e('Show/hide menu','_mbbasetheme') ?></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand"><?php _e('More sites about urban gardens in Madrid','_mbbasetheme'); ?></div>
+					</div>
+					<div class="collapse navbar-collapse" id="epi-menu-collapse">
+
+						<?php $args = array(
 							'theme_location'  => $location,
 							'container' => false,
 							'menu_id' => 'navbar-footer',
 							'menu_class' => 'nav navbar-nav navbar-left navbar-menu'
 						);
-						wp_nav_menu( $args );
-					} ?>
+						wp_nav_menu( $args ); ?>
+					</div>
 				</div>
-			</div>
-		</nav>
+			</nav>
+		<?php } ?>
 		<div id="epi-meta" class="container">
 			<div class="row">
 				<?php if ( is_active_sidebar( 'epi-widgets' ) ) {
