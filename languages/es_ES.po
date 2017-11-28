@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-10-14 00:25+0200\n"
-"PO-Revision-Date: 2017-10-14 00:25+0200\n"
+"POT-Creation-Date: 2017-11-28 14:29+0100\n"
+"PO-Revision-Date: 2017-11-28 14:33+0100\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -291,16 +291,20 @@ msgstr ""
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Continuar leyendo <span class=\"meta-nav\">&rarr;</span>"
 
-#: footer.php:18 footer.php:65 header.php:55
+#: footer.php:20 footer.php:67 header.php:55
 msgid "Show/hide menu"
 msgstr "Mostrar/ocultar el menú"
 
-#: footer.php:48
+#: footer.php:25
+msgid "More sites about urban gardens in Madrid"
+msgstr "Otros sitios web sobre huertos de Madrid"
+
+#: footer.php:50
 msgid "Logo of the Program for urban community gardens in Madrid"
 msgstr ""
 "Logotipo del Programa municipal de huertos urbanos comunitarios de Madrid"
 
-#: footer.php:60
+#: footer.php:62
 msgid "Madrid City Council"
 msgstr "Ayuntamiento de Madrid"
 
@@ -687,17 +691,38 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr "Resultados para la búsqueda %s"
 
-#: templates/page-blog.php:35
-msgid "Activities"
-msgstr "Actividades"
+#: templates/page-blog.php:36
+msgid "Last activities"
+msgstr "Últimas actividades"
 
-#: templates/page-blog.php:57
-msgid "News"
-msgstr "Noticias"
+#: templates/page-blog.php:37
+msgid "See more activities"
+msgstr "Ver más actividades"
 
-#: templates/page-blog.php:78
-msgid "Downloads"
-msgstr "Descargas"
+#: templates/page-blog.php:61
+msgid "Last news"
+msgstr "Últimas noticias"
+
+#: templates/page-blog.php:62
+msgid "See more news"
+msgstr "Ver más noticias"
+
+#: templates/page-blog.php:85
+msgid "Last downloads"
+msgstr "Últimas descargas"
+
+#: templates/page-blog.php:86
+msgid "See more downloads"
+msgstr "Ver más descargas"
+
+#~ msgid "Activities"
+#~ msgstr "Actividades"
+
+#~ msgid "News"
+#~ msgstr "Noticias"
+
+#~ msgid "Downloads"
+#~ msgstr "Descargas"
 
 #~ msgid "Last published gardens"
 #~ msgstr "Últimos huertos incorporados"
@@ -730,6 +755,3 @@ msgstr "Descargas"
 
 #~ msgid "Download the map in PDF format"
 #~ msgstr "Descargar el mapa en formato PDF"
-
-#~ msgid "Last news"
-#~ msgstr "Últimas noticias"

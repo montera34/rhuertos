@@ -19,20 +19,23 @@ get_header(); ?>
 	$args = array(
 		'post_type' => 'activity',
 		'posts_per_page' => '4',
-		'meta_query' => array(
+/*		'meta_query' => array(
 			array(
 				'key'     => '_act_date_end',
 				'value'   => date( "Y-m-d" ),
 				'compare' => '>',
 			),
-		)
+		)*/
 	);
 	$activities = new WP_Query($args);
 	if ( $activities->have_posts() ) :
 	?>
 
 		<section id="activities" class="block container">
-			<header class="row"><h2 class="col-sm-12"><a href="<?php echo $home ?>actividades"><?php _e('Activities','_mbbasetheme') ?></a></h2></header>
+			<header class="row">
+				<h2 class="col-sm-10"><?php _e('Last activities','_mbbasetheme') ?></h2>
+				<div class="col-sm-2 text-right"><a href="<?php echo $home ?>actividades"><i class="fa fa-plus-square" aria-hidden="true"></i> <?php _e('See more activities','_mbbasetheme'); ?></a></div>
+			</header>
 			<div class="row">
 				<?php while ( $activities->have_posts() ) : $activities->the_post();
 					get_template_part( 'content', 'activity' );
@@ -54,7 +57,10 @@ get_header(); ?>
 	?>
 
 		<section id="news" class="block container">
-			<header class="row"><h2 class="col-sm-12"><a href="<?php echo $home ?>noticias"><?php _e('News','_mbbasetheme') ?></a></h2></header>
+			<header class="row">
+				<h2 class="col-sm-10"><?php _e('Last news','_mbbasetheme') ?></h2>
+				<div class="col-sm-2 text-right"><a href="<?php echo $home ?>noticias"><i class="fa fa-plus-square" aria-hidden="true"></i> <?php _e('See more news','_mbbasetheme'); ?></a></div>
+			</header>
 			<div class="row">
 				<?php while ( $news->have_posts() ) : $news->the_post();
 					get_template_part( 'content', 'new' );
@@ -75,7 +81,10 @@ get_header(); ?>
 	?>
 
 		<section id="downloads" class="block container">
-			<header class="row"><h2 class="col-sm-12"><a href="<?php echo $home ?>descargas"><?php _e('Downloads','_mbbasetheme') ?></a></h2></header>
+			<header class="row">
+				<h2 class="col-sm-10"><?php _e('Last downloads','_mbbasetheme') ?></h2>
+				<div class="col-sm-2 text-right"><a href="<?php echo $home ?>descargas"><i class="fa fa-plus-square" aria-hidden="true"></i> <?php _e('See more downloads','_mbbasetheme'); ?></a></div>
+			</header>
 			<div class="row">
 				<?php while ( $downloads->have_posts() ) : $downloads->the_post();
 					get_template_part( 'content', 'download' );
