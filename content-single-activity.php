@@ -57,7 +57,7 @@ if ( $org !== false ) {
 	<header class="entry-header row">
 		<?php the_title( '<h1 class="entry-title col-sm-12">', '</h1>' ); ?>
 		<div class="clearfix"></div>
-		<div class="col-sm-8 entry-meta">
+		<div class="col-sm-12 entry-meta">
 			<ul class="actividad-dates list-inline">
 				<li><i class="fa fa-2x fa-calendar-o"></i> <?php echo $when_out; ?></li>
 				<li><i class="fa fa-2x fa-map-marker"></i> <?php echo $where_out; ?></li>
