@@ -42,7 +42,7 @@ $lat = get_post_meta($garden['ID'],'_garden_lat',true);
 $lon = get_post_meta($garden['ID'],'_garden_lon',true);
 
 // org output
-$org = get_the_terms($post->ID,'organizador');
+$org = get_the_terms($post->ID,'organizer');
 if ( $org !== false ) {
 	$org_out = '';
 	foreach ( $org as $t ) {

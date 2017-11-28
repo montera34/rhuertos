@@ -27,7 +27,7 @@ object {
 .single-garden,
 .single-new,
 .single-download,
-.single-actividad {
+.single-activity {
 	.entry-title {
 		font: {
 			family: 'Lato',sans-serif;
@@ -77,7 +77,7 @@ object {
 }
 .single-new,
 .single-download,
-.single-actividad {
+.single-activity {
 	.entry-meta {
 		margin-bottom: 1em;
 		a { font-weight: 700; }
@@ -98,7 +98,7 @@ object {
 		}
 	}
 }
-.single-actividad {
+.single-activity {
 	.actividad {
 		#map { height: 300px; margin-bottom: 1em; }
 		&-org-i { height: 26px; width: auto; vertical-align: bottom; }

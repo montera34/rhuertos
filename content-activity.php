@@ -13,7 +13,7 @@ $fields = array(
 //	'date' => get_post_meta($post->ID,'_act_date_end',true),
 	'garden' => get_post_meta($post->ID,'_act_garden',true),
 	'desc' => get_the_excerpt(),
-	'org' => get_the_terms($post->ID,'organizador')
+	'org' => get_the_terms($post->ID,'organizer')
 );
 foreach ( $fields as $k => $f ) {
 	switch ($k) {
