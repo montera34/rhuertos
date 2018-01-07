@@ -193,6 +193,9 @@ function _mbbasetheme_get_carousel($post_id) {
 
 	// carousel vars
 	$carousel_h = get_post_meta( $carousel['ID'],'_carousel_height',true);
+	$autoplay = get_post_meta( $carousel['ID'],'_carousel_autoplay',true);
+	$interval = get_post_meta( $carousel['ID'],'_carousel_interval',true);
+	$interval_out = ( $autoplay ) ? $interval : 'false';
 	// indicators and controls
 	$indicators = get_post_meta($carousel['ID'],'_carousel_indicators',true);
 	$controls = get_post_meta($carousel['ID'],'_carousel_controls',true);
@@ -209,7 +212,8 @@ function _mbbasetheme_get_carousel($post_id) {
 				<span class="sr-only">'.__('Next','_mbbasetheme').'</span>
 			</a>
 		';
-	} else {
+	}
+	else {
 		$controls_out = '';
 	}
 
@@ -250,7 +254,7 @@ function _mbbasetheme_get_carousel($post_id) {
 	$slides_out .= '</div>';
 
 	// output
-	echo '<div id="carousel-'.$carousel['post_slug'].'" class="carousel slide" data-ride="carousel" data-interval="false">'.$indicators_out . $slides_out . $controls_out.'</div>';
+	echo '<div id="carousel-'.$carousel['post_slug'].'" class="carousel slide" data-ride="carousel" data-interval="'.$interval_out.'" data-pause="hover" data-wrap="true" data-keyboard="true">'.$indicators_out . $slides_out . $controls_out.'</div>';
 
 }
 endif;
