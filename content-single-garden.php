@@ -83,7 +83,7 @@ foreach ( $fields as $k => $f ) {
 		<div class="clearfix"></div>
 		<dl class="entry-meta col-md-3">
 			<?php if ($address != '' || $district != '' ) echo '<dt>'.__('Address','_mbbasetheme').'</dt><dd>'.$address.' '.$district.'</dd>'; ?>
-			<?php echo '<dt>'.__('Entity','_mbbasetheme').'</dt><dd>'.$entity.'</dd>'; ?>
+			<?php if ($entity != '' ) echo '<dt>'.__('Entity','_mbbasetheme').'</dt><dd>'.$entity.'</dd>'; ?>
 			<?php if ($email != '' ) echo '<dt>'.__('Email','_mbbasetheme').'</dt><dd>'.$email.'</dd>'; ?>
 			<?php if ($website != '' ) echo '<dt>'.__('Website','_mbbasetheme').'</dt><dd><a href="'.$website.'">'.$website.'</a></dd>'; ?>
 			<?php if ($date_begin != '' ) echo '<dt>'.__('Begin data','_mbbasetheme').'</dt><dd>'.$date_begin.'</dd>'; ?>

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-08 10:47+0200\n"
-"PO-Revision-Date: 2018-05-08 10:47+0200\n"
+"POT-Creation-Date: 2018-05-08 13:57+0200\n"
+"PO-Revision-Date: 2018-05-08 13:58+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
@@ -135,11 +135,15 @@ msgstr "Los comentarios están cerrados"
 msgid "See content for details"
 msgstr "Más información en el contenido"
 
-#: content-garden-filters.php:10
+#: content-garden-filters.php:5
 msgid "Districts"
 msgstr "Distritos"
 
-#: content-garden-filters.php:22
+#: content-garden-filters.php:10
+msgid "Typology"
+msgstr "Tipología"
+
+#: content-garden-filters.php:23
 msgid "All"
 msgstr "Todo"
 
@@ -733,9 +737,6 @@ msgstr "Ver más descargas"
 
 #~ msgid "Gobernance"
 #~ msgstr "Modelo de gestión"
-
-#~ msgid "Typology"
-#~ msgstr "Tipología"
 
 #~ msgid "Add two widget for the credit area in the footer"
 #~ msgstr "Añadir dos widgets para la zona de créditos en el footer"

@@ -1,17 +1,18 @@
 <?php
 	$filters_out = '';
 	$filters = array(
-//		'typology' => array(
-//			'name' => __('Typology','_mbbasetheme'),
-//			'order' => 'meta_value_num',
-//			'cols' => '6'
-//		),
 		'district' => array(
 			'name' => __('Districts','_mbbasetheme'),
 			'order' => 'name',
 			'cols' => '12'
+		),
+		'typology' => array(
+			'name' => __('Typology','_mbbasetheme'),
+			'order' => 'meta_value_num',
+			'cols' => '12'
 		)
 	);
+
 	foreach ( $filters as $f => $d ) {
 		$args = array(
 			'taxonomy' => $f,
@@ -19,7 +20,8 @@
 		);
 		$termes = get_terms($args);
 		if ( !is_wp_error($termes) ) {
-			$terms_out = '<div class="col-md-'.$d['cols'].'"><div class="garden-filter-tit">'.$d['name'].'</div><ul class="garden-filter garden-filter-'.$f.' list-inline"><li><a data-filter="*" href="#">'.__('All','_mbbasetheme').'</a></li>';
+			$style_first = ( $f == 'typology') ? ' style="background-color: #fff;"' : '';
+			$terms_out = '<div class="col-md-'.$d['cols'].'"><div class="garden-filter-tit">'.$d['name'].'</div><ul class="garden-filter garden-filter-'.$f.' list-inline"><li><a'.$style_first.' data-filter="*" href="#">'.__('All','_mbbasetheme').'</a></li>';
 			foreach ( $termes as $t ) {
 				if ( $f == 'typology') {
 					$t_color = get_term_meta($t->term_id,"_typology_color",true);
