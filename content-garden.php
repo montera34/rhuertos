@@ -6,12 +6,15 @@ $loop_classes = 'col-sm-3 '.$loop_prefix;
 $loop_perma = get_permalink();
 if ( has_post_thumbnail() ) {
 	$loop_image = '<a href="' .$loop_perma. '">'.get_the_post_thumbnail($post->ID,$img_size,array('class' => 'img-responsive')).'</a>';
-} else { $loop_image = ""; }
+} else {
+	$loop_image = "";
+}
 
 $loop_tit = get_the_title();
 $fields = array(
 	'address' => get_post_meta($post->ID,'_garden_address',true),
 	'district' => get_the_terms($post->ID,'district'),
+	'entity' => get_post_meta($post->ID,'_garden_entity',true),
 //	'desc' => get_the_excerpt(),
 	'typo' => get_the_terms($post->ID,'typology'),
 	'icon' => get_post_meta($post->ID,'_garden_icon',true),
@@ -61,6 +64,7 @@ foreach ( $fields as $k => $f ) {
 			<a href="<?php echo $loop_perma ?>"><h3 class="<?php echo $loop_prefix; ?>-tit"<?php echo $loop_style ?>><?php echo $loop_tit ?></h3></a>
 		</header>
 		<?php //echo $address; ?>
+		<?php echo $entity; ?>
 		<?php echo $district; ?>
 	</div>
 	

@@ -10,12 +10,15 @@ $g_img_other = get_post_meta($post->ID,'_garden_img_other',true);
 if ( $g_img_other != '' ) {
 	$src = wp_get_attachment_image_src( $g_img_other['ID'],$img_size );
 	$loop_img_other = '<figure class="'.$loop_prefix.'-img-other"><img class="img-responsive" src="'.$src[0].'" alt="'.get_the_title().'" /></figure>';
-} else { $loop_img_other = ""; }
+} else {
+	$loop_img_other = "";
+}
 
 // header card
 $fields = array(
 	'address' => get_post_meta($post->ID,'_garden_address',true),
 	'district' => get_the_terms($post->ID,'district'),
+	'entity' => get_post_meta($post->ID,'_garden_entity',true),
 	'email' => get_post_meta($post->ID,'_garden_contact_email',true),
 	'website' => get_post_meta($post->ID,'_garden_contact_website',true),
 	'date_begin' => get_post_meta($post->ID,'_garden_date_begin',true),
@@ -80,10 +83,10 @@ foreach ( $fields as $k => $f ) {
 		<div class="clearfix"></div>
 		<dl class="entry-meta col-md-3">
 			<?php if ($address != '' || $district != '' ) echo '<dt>'.__('Address','_mbbasetheme').'</dt><dd>'.$address.' '.$district.'</dd>'; ?>
+			<?php echo '<dt>'.__('Entity','_mbbasetheme').'</dt><dd>'.$entity.'</dd>'; ?>
 			<?php if ($email != '' ) echo '<dt>'.__('Email','_mbbasetheme').'</dt><dd>'.$email.'</dd>'; ?>
 			<?php if ($website != '' ) echo '<dt>'.__('Website','_mbbasetheme').'</dt><dd><a href="'.$website.'">'.$website.'</a></dd>'; ?>
 			<?php if ($date_begin != '' ) echo '<dt>'.__('Begin data','_mbbasetheme').'</dt><dd>'.$date_begin.'</dd>'; ?>
-			<?php if ($area != '' ) echo '<dt>'.__('Area','_mbbasetheme').'</dt><dd>'.$area.' m2</dd>'; ?>
 		</dl><!-- .entry-meta -->
 		<dl class="entry-meta col-md-5">
 			<?php if ($governance != '' ) echo '<dt>'.__('Governance','_mbbasetheme').'</dt><dd>'.$governance.'</dd>'; ?>
@@ -91,6 +94,7 @@ foreach ( $fields as $k => $f ) {
 			<?php if ($members != '' ) echo '<dt>'.__('Participants','_mbbasetheme').'</dt><dd>'.$members.'</dd>'; ?>
 			<?php if ($kernel != '' ) echo '<dt>'.__('People in kernel group','_mbbasetheme').'</dt><dd>'.$kernel.'</dd>'; ?>
 			<?php if ($collaborators != '' ) echo '<dt>'.__('Collaborators','_mbbasetheme').'</dt><dd>'.$collaborators.'</dd>'; ?>
+			<?php if ($area != '' ) echo '<dt>'.__('Area','_mbbasetheme').'</dt><dd>'.$area.' m2</dd>'; ?>
 		</dl><!-- .entry-meta -->
 		<div class="col-md-4">
 			<h2 class="entry-subtitle"><?php _e('Equipment','_mbbasetheme'); ?></h2>

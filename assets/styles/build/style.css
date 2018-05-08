@@ -513,12 +513,18 @@ body.page-template-page-gardens .garden-text {
   padding: 7px 10px;
   display: table;
   width: 100%;
-  height: 100px;
+  height: 120px;
 }
 body.home .garden-address,
 body.search .garden-address,
 body.page-template-page-gardens .garden-address {
   font: 400 14px 'Lato', sans-serif;
+}
+body.home .garden-entity,
+body.search .garden-entity,
+body.page-template-page-gardens .garden-entity {
+  display: table-row;
+  line-height: 1em;
 }
 body.home .garden-district,
 body.search .garden-district,

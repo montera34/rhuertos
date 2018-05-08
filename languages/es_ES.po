@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rhuertos 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-11-28 14:29+0100\n"
-"PO-Revision-Date: 2017-11-28 14:33+0100\n"
+"POT-Creation-Date: 2018-05-08 10:47+0200\n"
+"PO-Revision-Date: 2018-05-08 10:47+0200\n"
 "Last-Translator: Alfonso Sánchez Uzábal <skotperez@voragine.net>\n"
 "Language-Team: Montera34\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_x\n"
@@ -170,7 +170,7 @@ msgid "Pages:"
 msgstr "Páginas:"
 
 #: content-page.php:35 content-search.php:53 content-single-activity.php:65
-#: content-single-download.php:38 content-single-garden.php:129
+#: content-single-download.php:38 content-single-garden.php:133
 #: content-single-new.php:22 content-single.php:58 content.php:55
 msgid "Edit"
 msgstr "Editar"
@@ -208,55 +208,59 @@ msgstr "% comentarios"
 msgid "Organizer: %s"
 msgstr "Organizador: %s"
 
-#: content-single-garden.php:82
+#: content-single-garden.php:85
 msgid "Address"
 msgstr "Dirección"
 
-#: content-single-garden.php:83
+#: content-single-garden.php:86
+msgid "Entity"
+msgstr "Entidad responsable"
+
+#: content-single-garden.php:87
 msgid "Email"
 msgstr "Email de contacto"
 
-#: content-single-garden.php:84
+#: content-single-garden.php:88
 msgid "Website"
 msgstr "Sitio web"
 
-#: content-single-garden.php:85
+#: content-single-garden.php:89
 msgid "Begin data"
 msgstr "Fecha de inicio"
 
-#: content-single-garden.php:86
-msgid "Area"
-msgstr "Área"
-
-#: content-single-garden.php:89
+#: content-single-garden.php:92
 msgid "Governance"
 msgstr "Modelo de gestión"
 
-#: content-single-garden.php:90
+#: content-single-garden.php:93
 msgid "Open time"
 msgstr "Días y horas de apertura"
 
-#: content-single-garden.php:91
+#: content-single-garden.php:94
 msgid "Participants"
 msgstr "Número de participantes"
 
-#: content-single-garden.php:92
+#: content-single-garden.php:95
 msgid "People in kernel group"
 msgstr "Número de integrantes del grupo motor"
 
-#: content-single-garden.php:93
+#: content-single-garden.php:96
 msgid "Collaborators"
 msgstr "Entidades que participan y colaboran"
 
-#: content-single-garden.php:96
+#: content-single-garden.php:97
+msgid "Area"
+msgstr "Área"
+
+#: content-single-garden.php:100
 msgid "Equipment"
 msgstr "Equipamiento"
 
-#: content-single-garden.php:108
+#: content-single-garden.php:112
 msgid "Location"
 msgstr "Localización"
 
-#: content-single-garden.php:128
+#: content-single-garden.php:132
 #, php-format
 msgid "Data collected on %s"
 msgstr "Datos recogidos el %s"
@@ -629,15 +633,15 @@ msgstr "Buscar"
 msgid "Search results: "
 msgstr "Resultados de la búsqueda:"
 
-#: lib/inc/template-tags.php:205
+#: lib/inc/template-tags.php:208
 msgid "Previous"
 msgstr "Previo"
 
-#: lib/inc/template-tags.php:209
+#: lib/inc/template-tags.php:212
 msgid "Next"
 msgstr "Siguiente"
 
-#: lib/inc/template-tags.php:269
+#: lib/inc/template-tags.php:273
 #, php-format
 msgid "Content updated on %s"
 msgstr "Contenido actualizado el %s"
